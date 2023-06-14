@@ -1,0 +1,22 @@
+.nav {
+	&__top {
+		display: inline-flex;
+		align-items: end;
+		justify-content: end;
+		width: 80%;
+		right: 0;
+		&__container {
+			display: flex;
+			flex-direction: row;
+			&__item {
+				display: inline-flex;
+				padding: 0.5rem 1rem;
+				margin: 1rem;
+				a {
+					color: #ccc;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}

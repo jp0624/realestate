@@ -1,7 +1,5 @@
-// import { useState } from "react"
-// import reactLogo from "./assets/react.svg"
-// import viteLogo from "/vite.svg"
-import "./App.css"
+import { Route, Routes, useLocation } from "react-router-dom"
+import "./App.scss"
 import {
 	// doc,
 	query,
@@ -16,22 +14,16 @@ import {
 	useFirestore,
 	useFirebaseApp,
 } from "reactfire"
+import HomePage from "./pages/HomePage/HomePage"
+import MapPage from "./pages/MapPage/MapPage"
+import LocationPage from "./pages/LocationPage/LocationPage"
+import ListingsPage from "./pages/ListingsPage/ListingsPage"
+import Header from "./components/structure/Header/Header"
+import Footer from "./components/structure/Footer/Footer"
+import Body from "./components/structure/Body/Body"
 
-// function Locations() {
-// 	// easily access the Firestore library
-// 	const condo01 = doc(useFirestore(), "locations", "condo01")
-
-// 	// subscribe to a document for realtime updates. just one line!
-// 	const { status, data } = useFirestoreDocData(condo01)
-
-// 	// easily check the loading status
-// 	if (status === "loading") {
-// 		return <p>Fetching Locations...</p>
-// 	}
-// 	console.log("data: ", data)
-// 	return <p>The address is {data.address ? data.address : "no address"}!</p>
-// }
 let LocationsList: any = []
+
 function Locations() {
 	const firestore = useFirestore()
 	const LocationsCollection = collection(firestore, "locations")
@@ -61,10 +53,26 @@ function Locations() {
 }
 
 function App() {
+	let locationPath = useLocation().pathname.replace("/", "")
+	if (!locationPath) {
+		locationPath = "home"
+	}
+	console.log("path: " + locationPath)
 	const firestoreInstance = getFirestore(useFirebaseApp())
 	return (
 		<FirestoreProvider sdk={firestoreInstance}>
-			<Locations />
+			<Header page={locationPath} />
+			{/* <Locations /> */}
+			<Body page={locationPath}>
+				<Routes>
+					<Route path='/' element={<HomePage />} />
+					<Route path='/map' element={<MapPage />} />
+					<Route path='/listings' element={<ListingsPage />} />
+					<Route path='/location' element={<LocationPage />} />
+					<Route path='/location/:id' element={<LocationPage />} />
+				</Routes>
+			</Body>
+			<Footer page={locationPath} />
 		</FirestoreProvider>
 	)
 }

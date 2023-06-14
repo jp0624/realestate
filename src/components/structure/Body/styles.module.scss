@@ -1,0 +1,19 @@
+.article {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	&__home {
+		.slide {
+			&__container {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				overflow: hidden;
+			}
+		}
+		align-items: center;
+		justify-content: center;
+	}
+	&__interrior {
+	}
+}
