@@ -3,7 +3,7 @@
 // import viteLogo from "/vite.svg"
 import "./App.css"
 import {
-	doc,
+	// doc,
 	query,
 	collection,
 	orderBy,
@@ -12,7 +12,7 @@ import {
 import {
 	FirestoreProvider,
 	useFirestoreCollectionData,
-	useFirestoreDocData,
+	// useFirestoreDocData,
 	useFirestore,
 	useFirebaseApp,
 } from "reactfire"
