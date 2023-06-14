@@ -1,7 +1,7 @@
 import BtmNav from "../../navs/BtmNav/BtmNav"
 import styles from "./styles.module.scss"
 
-const Footer = ({ locationPath }: any) => {
+const Footer = () => {
 	return (
 		<>
 			<footer className={`${styles.footer}`}>

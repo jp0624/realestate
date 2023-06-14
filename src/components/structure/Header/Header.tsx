@@ -2,7 +2,7 @@ import TopNav from "../../navs/TopNav/TopNav"
 import styles from "./styles.module.scss"
 import { NavLink } from "react-router-dom"
 
-const Header = ({ locationPath }: any) => {
+const Header = () => {
 	return (
 		<>
 			<header className={`${styles.header}`}>

@@ -2,16 +2,16 @@ import { Route, Routes, useLocation } from "react-router-dom"
 import "./App.scss"
 import {
 	// doc,
-	// query,
-	// collection,
-	// orderBy,
+	query,
+	collection,
+	orderBy,
 	getFirestore,
 } from "firebase/firestore"
 import {
 	FirestoreProvider,
-	// useFirestoreCollectionData,
+	useFirestoreCollectionData,
 	// useFirestoreDocData,
-	// useFirestore,
+	useFirestore,
 	useFirebaseApp,
 } from "reactfire"
 import HomePage from "./pages/HomePage/HomePage"
@@ -22,35 +22,35 @@ import Header from "./components/structure/Header/Header"
 import Footer from "./components/structure/Footer/Footer"
 import Body from "./components/structure/Body/Body"
 
-// let LocationsList: any = []
+let LocationsList: any = []
 
-// function Locations() {
-// 	const firestore = useFirestore()
-// 	const LocationsCollection = collection(firestore, "locations")
-// 	const locationsQuery = query(LocationsCollection, orderBy("address", "asc"))
+function Locations() {
+	const firestore = useFirestore()
+	const LocationsCollection = collection(firestore, "locations")
+	const locationsQuery = query(LocationsCollection, orderBy("address", "asc"))
 
-// 	const { status, data: locations } = useFirestoreCollectionData(
-// 		locationsQuery,
-// 		{
-// 			idField: "id",
-// 		}
-// 	)
+	const { status, data: locations } = useFirestoreCollectionData(
+		locationsQuery,
+		{
+			idField: "id",
+		}
+	)
 
-// 	if (status === "loading") {
-// 		return <span>loading...</span>
-// 	}
+	if (status === "loading") {
+		return <span>loading...</span>
+	}
 
-// 	console.log("data: ", locations)
-// 	LocationsList = locations
+	console.log("data: ", locations)
+	LocationsList = locations
 
-// 	return (
-// 		<ul>
-// 			{LocationsList.map((location: any) => (
-// 				<li key={location.id}>{location.address}</li>
-// 			))}
-// 		</ul>
-// 	)
-// }
+	return (
+		<ul>
+			{LocationsList.map((location: any) => (
+				<li key={location.id}>{location.address}</li>
+			))}
+		</ul>
+	)
+}
 
 function App() {
 	let locationPath = useLocation().pathname.replace("/", "")
@@ -61,7 +61,7 @@ function App() {
 	const firestoreInstance = getFirestore(useFirebaseApp())
 	return (
 		<FirestoreProvider sdk={firestoreInstance}>
-			<Header page={locationPath} />
+			<Header />
 			{/* <Locations /> */}
 			<Body page={locationPath}>
 				<Routes>
@@ -72,7 +72,7 @@ function App() {
 					<Route path='/location/:id' element={<LocationPage />} />
 				</Routes>
 			</Body>
-			<Footer page={locationPath} />
+			<Footer />
 		</FirestoreProvider>
 	)
 }
