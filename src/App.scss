@@ -25,6 +25,10 @@ article {
 	width: 100%;
 	position: relative;
 }
+header,
+footer {
+	background-image: url(./assets/img/backgrounds/background-bar.png);
+}
 article {
 	min-height: calc(100% - 8rem);
 }
