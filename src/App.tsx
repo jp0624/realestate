@@ -1,35 +1,72 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// import { useState } from "react"
+// import reactLogo from "./assets/react.svg"
+// import viteLogo from "/vite.svg"
+import "./App.css"
+import {
+	doc,
+	query,
+	collection,
+	orderBy,
+	getFirestore,
+} from "firebase/firestore"
+import {
+	FirestoreProvider,
+	useFirestoreCollectionData,
+	useFirestoreDocData,
+	useFirestore,
+	useFirebaseApp,
+} from "reactfire"
+
+// function Locations() {
+// 	// easily access the Firestore library
+// 	const condo01 = doc(useFirestore(), "locations", "condo01")
+
+// 	// subscribe to a document for realtime updates. just one line!
+// 	const { status, data } = useFirestoreDocData(condo01)
+
+// 	// easily check the loading status
+// 	if (status === "loading") {
+// 		return <p>Fetching Locations...</p>
+// 	}
+// 	console.log("data: ", data)
+// 	return <p>The address is {data.address ? data.address : "no address"}!</p>
+// }
+let LocationsList: any = []
+function Locations() {
+	const firestore = useFirestore()
+	const LocationsCollection = collection(firestore, "locations")
+	const locationsQuery = query(LocationsCollection, orderBy("address", "asc"))
+
+	const { status, data: locations } = useFirestoreCollectionData(
+		locationsQuery,
+		{
+			idField: "id",
+		}
+	)
+
+	if (status === "loading") {
+		return <span>loading...</span>
+	}
+
+	console.log("data: ", locations)
+	LocationsList = locations
+
+	return (
+		<ul>
+			{LocationsList.map((location: any) => (
+				<li key={location.id}>{location.address}</li>
+			))}
+		</ul>
+	)
+}
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+	const firestoreInstance = getFirestore(useFirebaseApp())
+	return (
+		<FirestoreProvider sdk={firestoreInstance}>
+			<Locations />
+		</FirestoreProvider>
+	)
 }
 
 export default App
