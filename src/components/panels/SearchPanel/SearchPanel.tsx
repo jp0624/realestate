@@ -1,5 +1,6 @@
 import { useState, useContext } from "react"
 import { useNavigate } from "react-router-dom"
+import Geocode from "react-geocode"
 
 import { SiteContext } from "../../../context/SiteContext"
 import styles from "./styles.module.scss"
@@ -8,6 +9,10 @@ const SearchPanel = () => {
 	const { searchValue, setSearchValue } = useContext(SiteContext)
 	const [inputValue, setInput] = useState("")
 	const navigate = useNavigate()
+	Geocode.setApiKey("AIzaSyCGqpSmMYvHjvEe97P4ecrw_Z2KzrM55Sc")
+	Geocode.setLanguage("en")
+	Geocode.setLocationType("ROOFTOP")
+	Geocode.enableDebug()
 
 	if ("geolocation" in navigator) {
 		console.log("Available")
@@ -36,7 +41,16 @@ const SearchPanel = () => {
 		// 	cleanTerms.push(term.toLowerCase().trim().split(" "))
 		// })
 		setSearchValue(inputValue)
-		navigate(`/map?search=${inputValue}`)
+		Geocode.fromAddress(inputValue).then(
+			(response: any) => {
+				const { lat, lng } = response.results[0].geometry.location
+				console.log("LAT AND LNG: ", lat + " " + lng)
+				navigate(`/map?lat=${lat}&lng=${lng}`)
+			},
+			(error: any) => {
+				console.error(error)
+			}
+		)
 	}
 	let initValue = ""
 	!!searchValue && (initValue = searchValue)
