@@ -14,6 +14,7 @@ import {
 	useFirestore,
 	useFirebaseApp,
 } from "reactfire"
+import { SiteProvider } from "./context/SiteContext"
 import HomePage from "./pages/HomePage/HomePage"
 import MapPage from "./pages/MapPage/MapPage"
 import LocationPage from "./pages/LocationPage/LocationPage"
@@ -61,18 +62,23 @@ function App() {
 	const firestoreInstance = getFirestore(useFirebaseApp())
 	return (
 		<FirestoreProvider sdk={firestoreInstance}>
-			<Header />
-			{/* <Locations /> */}
-			<Body page={locationPath}>
-				<Routes>
-					<Route path='/' element={<HomePage />} />
-					<Route path='/map' element={<MapPage />} />
-					<Route path='/listings' element={<ListingsPage />} />
-					<Route path='/location' element={<LocationPage />} />
-					<Route path='/location/:id' element={<LocationPage />} />
-				</Routes>
-			</Body>
-			<Footer />
+			<SiteProvider>
+				<Header />
+				{/* <Locations /> */}
+				<Body page={locationPath}>
+					<Routes>
+						<Route path='/' element={<HomePage />} />
+						<Route path='/map' element={<MapPage />} />
+						<Route path='/listings' element={<ListingsPage />} />
+						<Route path='/location' element={<LocationPage />} />
+						<Route
+							path='/location/:id'
+							element={<LocationPage />}
+						/>
+					</Routes>
+				</Body>
+				<Footer />
+			</SiteProvider>
 		</FirestoreProvider>
 	)
 }

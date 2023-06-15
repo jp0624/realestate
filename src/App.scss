@@ -28,6 +28,8 @@ article {
 header,
 footer {
 	background-image: url(./assets/img/backgrounds/background-bar.png);
+	position: relative;
+	z-index: 2;
 }
 article {
 	min-height: calc(100% - 8rem);

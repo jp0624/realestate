@@ -42,7 +42,6 @@ const Body = ({ children, page }: any) => {
 						</Fade>
 					</div>
 				)}
-				<div>Body</div>
 				{children}
 			</article>
 		</>
