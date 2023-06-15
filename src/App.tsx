@@ -14,6 +14,8 @@ import {
 	useFirestore,
 	useFirebaseApp,
 } from "reactfire"
+
+import { LoadScript } from "@react-google-maps/api"
 import { SiteProvider } from "./context/SiteContext"
 import HomePage from "./pages/HomePage/HomePage"
 import MapPage from "./pages/MapPage/MapPage"

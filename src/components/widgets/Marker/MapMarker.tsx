@@ -1,18 +1,17 @@
-import React from "react"
-import PropTypes from "prop-types"
-
-const Marker = ({ text, onClick, lat, lng }: any) => (
-	// <Wrapper alt={text} onClick={onClick} />
-	<div title={text} onClick={onClick}></div>
-)
-
-Marker.defaultProps = {
-	onClick: null,
+import styles from "./styles.module.scss"
+import { MarkerF } from "@react-google-maps/api"
+const MapMarker = ({ text, coords }: any) => {
+	const onMarkerClick = (event: any) => {
+		console.log(coords)
+	}
+	return (
+		<MarkerF
+			onClick={onMarkerClick}
+			key={text}
+			label={text}
+			position={coords}
+		/>
+	)
 }
 
-Marker.propTypes = {
-	onClick: PropTypes.func,
-	text: PropTypes.string.isRequired,
-}
-
-export default Marker
+export default MapMarker

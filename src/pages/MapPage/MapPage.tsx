@@ -1,9 +1,16 @@
 import { useContext } from "react"
 import { SiteContext } from "../../context/SiteContext"
 import styles from "./styles.module.scss"
-import GoogleMap from "google-map-react"
-import Marker from "../../components/widgets/Marker/MapMarker"
+import {
+	GoogleMap,
+	LoadScript,
+	useLoadScript,
+	MarkerF,
+	useJsApiLoader,
+} from "@react-google-maps/api"
+import MapMarker from "../../components/widgets/Marker/MapMarker"
 import { Routes, Route, useParams, useSearchParams } from "react-router-dom"
+import MapLocationList from "../../components/panels/MapLocationList/MapLocationList"
 
 const MapPage = () => {
 	const { searchValue, setSearchValue } = useContext(SiteContext)
@@ -12,10 +19,12 @@ const MapPage = () => {
 		lat: +searchParams.get("lat")! || 43.64134360340362,
 		lng: +searchParams.get("lng")! || -79.39167602461177,
 	}
-	console.log("searchParams LAT: ", searchParams.get("lat"))
-	console.log("searchParams LNG: ", searchParams.get("lng"))
-	console.log("searchLatLng.lat: ", searchLatLng.lat)
-	console.log("searchLatLng.lng: ", searchLatLng.lng)
+
+	const { isLoaded } = useLoadScript({
+		id: "google-map-script",
+		googleMapsApiKey: "AIzaSyCGqpSmMYvHjvEe97P4ecrw_Z2KzrM55Sc",
+	})
+
 	const defaultProps = {
 		center: {
 			lat: searchLatLng.lat,
@@ -40,36 +49,64 @@ const MapPage = () => {
 		_onClick: ({ x, y, lat, lng, event }: any) =>
 			console.log(x, y, lat, lng, event),
 	}
-	console.log("defaultProps:", defaultProps)
 	const locations = [
-		{ id: "123 main st", lat: 43.64134360340362, lng: -79.39167602461177 },
-		{ id: "234 main st", lat: 43.66314146548834, lng: -79.36395271547869 },
+		{
+			address: "123 main st",
+			coords: { lat: 43.64134360340362, lng: -79.39167602461177 },
+		},
+		{
+			address: "234 main st",
+			coords: { lat: 43.66314146548834, lng: -79.36395271547869 },
+		},
+		{
+			address: "23456 Blah Ave",
+			coords: { lat: 43.85917013188701, lng: -79.71591901105445 },
+		},
+		{
+			address: "934 test st",
+			coords: { lat: 43.57430421351184, lng: -79.74063824644244 },
+		},
+		{
+			address: "200 Another St",
+			coords: { lat: 43.87402135204113, lng: -79.1556163422598 },
+		},
+		{
+			address: "110 Charles Est St",
+			coords: { lat: 43.64291479171653, lng: -79.5154185462407 },
+		},
+		{
+			address: "55 Broadview Dr",
+			coords: { lat: 43.68563252315617, lng: -79.61841536035735 },
+		},
+		{
+			address: "9 Temp Blvd",
+			coords: { lat: 43.690597728409564, lng: -79.29981188202315 },
+		},
+		{
+			address: "44 Mapleleafs Rd",
+			coords: { lat: 43.620053294961146, lng: -79.3918223693007 },
+		},
 	]
 	return (
-		<>
-			<div className={`${styles.map__container}`}>
+		isLoaded && (
+			<>
 				<GoogleMap
-					bootstrapURLKeys={{
-						key: "AIzaSyCGqpSmMYvHjvEe97P4ecrw_Z2KzrM55Sc",
-						language: "en",
-					}}
+					mapContainerClassName={`${styles.map__container}`}
+					center={defaultProps.center}
+					zoom={defaultProps.zoom}
 					options={defaultProps.options}
-					defaultCenter={defaultProps.center}
-					defaultZoom={defaultProps.zoom}
-					onClick={defaultProps._onClick}
-					yesIWantToUseGoogleMapApiInternals
 				>
-					{/* {locations.map((location) => (
-						<Marker
-							key={location.id}
-							text={location.id}
-							lat={location.lat}
-							lng={location.lng}
+					{locations.map((location, index) => (
+						<MapMarker
+							key={index}
+							text={location.address}
+							coords={location.coords}
 						/>
-					))} */}
+					))}
+					<MapLocationList locations={locations} />
 				</GoogleMap>
-			</div>
-		</>
+			</>
+		)
 	)
 }
 

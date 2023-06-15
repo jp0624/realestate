@@ -5,6 +5,13 @@ import Geocode from "react-geocode"
 import { SiteContext } from "../../../context/SiteContext"
 import styles from "./styles.module.scss"
 
+////////////////////////////////
+////////////////////////////////
+////////////////////////////////
+// useMemo from react for input default
+////////////////////////////////
+////////////////////////////////
+////////////////////////////////
 const SearchPanel = () => {
 	const { searchValue, setSearchValue } = useContext(SiteContext)
 	const [inputValue, setInput] = useState("")
@@ -35,11 +42,6 @@ const SearchPanel = () => {
 	}
 	const submitSearch = (event: any) => {
 		event.preventDefault()
-		// let termsArr: string[] = inputValue.split(",")
-		// let cleanTerms: string[] = []
-		// termsArr.forEach((term: any) => {
-		// 	cleanTerms.push(term.toLowerCase().trim().split(" "))
-		// })
 		setSearchValue(inputValue)
 		Geocode.fromAddress(inputValue).then(
 			(response: any) => {
@@ -48,6 +50,7 @@ const SearchPanel = () => {
 				navigate(`/map?lat=${lat}&lng=${lng}`)
 			},
 			(error: any) => {
+				navigate(`/map`)
 				console.error(error)
 			}
 		)
