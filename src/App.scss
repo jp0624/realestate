@@ -27,7 +27,7 @@ article {
 }
 header,
 footer {
-	background-image: url(./assets/img/backgrounds/background-bar.png);
+	background-image: url(/assets/img/backgrounds/background-bar.png);
 	position: relative;
 	z-index: 2;
 }
@@ -41,6 +41,7 @@ footer {
 	height: 3rem;
 }
 .customScroll {
+	overflow-y: auto;
 	&::-webkit-scrollbar {
 		width: 14px;
 	}

@@ -1,0 +1,57 @@
+.comments {
+	&__heading {
+		font-size: 1.5rem;
+		font-weight: 600;
+		margin: 0.5rem 0;
+	}
+	&__container {
+	}
+	&__comment {
+		margin: 1rem 0.5rem;
+		padding: 1rem;
+		border: 1px solid #999;
+		&__title {
+			font-size: 1.25rem;
+			font-weight: 600;
+		}
+		&__time {
+			color: rgb(180, 1, 1);
+			font-weight: 500;
+		}
+		&__text {
+			margin: 0.5rem 0;
+			line-height: 1.5rem;
+		}
+	}
+	&__form {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 1rem;
+		margin-bottom: 1rem;
+		border-bottom: 1px solid #999;
+		li {
+			display: flex;
+			flex-direction: column;
+			margin: 0.5rem 0;
+			label {
+				width: 100%;
+				margin-bottom: 0.5rem;
+			}
+			input,
+			select {
+				padding: 0.5rem;
+				min-height: 2rem;
+				width: calc(50% - 1rem);
+			}
+			textarea {
+				padding: 0.5rem;
+				min-height: 10rem;
+				width: calc(100% - 1rem);
+			}
+			button {
+				min-height: 2rem;
+				width: 25%;
+			}
+		}
+	}
+}

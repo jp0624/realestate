@@ -1,20 +1,7 @@
 import { Route, Routes, useLocation } from "react-router-dom"
 import "./App.scss"
-import {
-	// doc,
-	query,
-	collection,
-	orderBy,
-	getFirestore,
-} from "firebase/firestore"
-import {
-	FirestoreProvider,
-	useFirestoreCollectionData,
-	// useFirestoreDocData,
-	useFirestore,
-	useFirebaseApp,
-} from "reactfire"
-
+import { FirestoreProvider, useFirebaseApp } from "reactfire"
+import { getFirestore } from "firebase/firestore"
 import { LoadScript } from "@react-google-maps/api"
 import { SiteProvider } from "./context/SiteContext"
 import HomePage from "./pages/HomePage/HomePage"
@@ -24,36 +11,7 @@ import ListingsPage from "./pages/ListingsPage/ListingsPage"
 import Header from "./components/structure/Header/Header"
 import Footer from "./components/structure/Footer/Footer"
 import Body from "./components/structure/Body/Body"
-
-let LocationsList: any = []
-
-function Locations() {
-	const firestore = useFirestore()
-	const LocationsCollection = collection(firestore, "locations")
-	const locationsQuery = query(LocationsCollection, orderBy("address", "asc"))
-
-	const { status, data: locations } = useFirestoreCollectionData(
-		locationsQuery,
-		{
-			idField: "id",
-		}
-	)
-
-	if (status === "loading") {
-		return <span>loading...</span>
-	}
-
-	console.log("data: ", locations)
-	LocationsList = locations
-
-	return (
-		<ul>
-			{LocationsList.map((location: any) => (
-				<li key={location.id}>{location.address}</li>
-			))}
-		</ul>
-	)
-}
+import { LocationsProvider, useLocationsContext } from "./helpers/GetListings"
 
 function App() {
 	let locationPath = useLocation().pathname.replace("/", "")
@@ -62,23 +20,31 @@ function App() {
 	}
 	console.log("path: " + locationPath)
 	const firestoreInstance = getFirestore(useFirebaseApp())
+
 	return (
 		<FirestoreProvider sdk={firestoreInstance}>
 			<SiteProvider>
 				<Header />
-				{/* <Locations /> */}
-				<Body page={locationPath}>
-					<Routes>
-						<Route path='/' element={<HomePage />} />
-						<Route path='/map' element={<MapPage />} />
-						<Route path='/listings' element={<ListingsPage />} />
-						<Route path='/location' element={<LocationPage />} />
-						<Route
-							path='/location/:id'
-							element={<LocationPage />}
-						/>
-					</Routes>
-				</Body>
+				<LocationsProvider>
+					<Body page={locationPath}>
+						<Routes>
+							<Route path='/' element={<HomePage />} />
+							<Route path='/map' element={<MapPage />} />
+							<Route
+								path='/listings'
+								element={<ListingsPage />}
+							/>
+							<Route
+								path='/location'
+								element={<LocationPage />}
+							/>
+							<Route
+								path='/location/:id'
+								element={<LocationPage />}
+							/>
+						</Routes>
+					</Body>
+				</LocationsProvider>
 				<Footer />
 			</SiteProvider>
 		</FirestoreProvider>

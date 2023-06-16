@@ -16,7 +16,7 @@ const Body = ({ children, page }: any) => {
 		},
 	]
 	const homeClass = styles.article__home
-	const interriorClass = styles.article_interrior
+	const interriorClass = styles.article__interrior
 	// const backgroundArr = ["background01.jpg", "background02.jpg"]
 	// const backgroundImg =
 	// 	backgroundArr[Math.floor(Math.random() * backgroundArr.length)]
@@ -25,7 +25,7 @@ const Body = ({ children, page }: any) => {
 			<article
 				className={`article ${
 					page === "home" ? homeClass : interriorClass
-				}`}
+				} customScroll`}
 			>
 				{page === "home" && (
 					<div className={`${styles.slide__container}`}>

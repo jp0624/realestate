@@ -7,7 +7,7 @@ const Header = () => {
 		<>
 			<header className={`${styles.header}`}>
 				<NavLink to='/' className={`${styles.logo__main}`}>
-					<img src='./assets/img/logo/logo-horz.svg' />
+					<img src='/assets/img/logo/logo-horz.svg' />
 				</NavLink>
 				<TopNav />
 			</header>

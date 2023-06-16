@@ -4,7 +4,7 @@ import SearchPanel from "./../../components/panels/SearchPanel/SearchPanel"
 const HomePage = () => {
 	return (
 		<>
-			<SearchPanel />
+			<SearchPanel pageType={"homePage"} />
 		</>
 	)
 }

@@ -1,15 +1,33 @@
 import styles from "./styles.module.scss"
-import { MarkerF } from "@react-google-maps/api"
-const MapMarker = ({ text, coords }: any) => {
-	const onMarkerClick = (event: any) => {
-		console.log(coords)
+import { Marker } from "@react-google-maps/api"
+import { useContext } from "react"
+import { SiteContext } from "../../../context/SiteContext"
+
+const MapMarker = ({ location, text, coords }: any) => {
+	const {
+		mapBounds,
+		searchValue,
+		selectedLocation,
+		setSearchValue,
+		setMapBounds,
+		setSelectedLocation,
+	} = useContext(SiteContext)
+
+	const onMarkerClick = () => {
+		setSelectedLocation(location.id)
 	}
+
 	return (
-		<MarkerF
+		<Marker
 			onClick={onMarkerClick}
 			key={text}
-			label={text}
 			position={coords}
+			label={{
+				text: text,
+				className: `${styles.mapMarker} ${
+					location.id === selectedLocation ? styles.active : ""
+				}`,
+			}}
 		/>
 	)
 }

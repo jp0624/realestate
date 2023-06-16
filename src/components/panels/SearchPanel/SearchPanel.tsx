@@ -12,27 +12,15 @@ import styles from "./styles.module.scss"
 ////////////////////////////////
 ////////////////////////////////
 ////////////////////////////////
-const SearchPanel = () => {
-	const { searchValue, setSearchValue } = useContext(SiteContext)
+const SearchPanel = ({ pageType }: any) => {
+	const { searchValue, setSearchValue, setSelectedLocation } =
+		useContext(SiteContext)
 	const [inputValue, setInput] = useState("")
 	const navigate = useNavigate()
 	Geocode.setApiKey("AIzaSyCGqpSmMYvHjvEe97P4ecrw_Z2KzrM55Sc")
 	Geocode.setLanguage("en")
 	Geocode.setLocationType("ROOFTOP")
 	Geocode.enableDebug()
-
-	if ("geolocation" in navigator) {
-		console.log("Available")
-		navigator.geolocation.getCurrentPosition(function (position) {
-			console.log("Latitude is :", position.coords.latitude)
-			console.log("Longitude is :", position.coords.longitude)
-		})
-		navigator.geolocation.getCurrentPosition(function (position) {
-			console.log(position)
-		})
-	} else {
-		console.log("Not Available")
-	}
 
 	const inputUpdate = (event: any) => {
 		setInput(event.target.value)
@@ -43,26 +31,36 @@ const SearchPanel = () => {
 	const submitSearch = (event: any) => {
 		event.preventDefault()
 		setSearchValue(inputValue)
+		setSelectedLocation("")
 		Geocode.fromAddress(inputValue).then(
 			(response: any) => {
 				const { lat, lng } = response.results[0].geometry.location
 				console.log("LAT AND LNG: ", lat + " " + lng)
+
 				navigate(`/map?lat=${lat}&lng=${lng}`)
 			},
 			(error: any) => {
-				navigate(`/map`)
+				const lat = 43.64134360340362
+				const lng = -79.39167602461177
+				navigate(`/map?lat=${lat}&lng=${lng}`)
 				console.error(error)
 			}
 		)
 	}
 	let initValue = ""
 	!!searchValue && (initValue = searchValue)
+	let containerStyle
+	if (!!pageType && pageType == "homePage") {
+		containerStyle = styles.searchPanel__container__home
+	} else if (!!pageType && pageType == "mapPage") {
+		containerStyle = styles.searchPanel__container__map
+	}
 
 	return (
 		<>
 			<form
 				onSubmit={submitSearch}
-				className={`${styles.searchPanel__container}`}
+				className={`${styles.searchPanel__container} ${containerStyle}`}
 			>
 				<h2>Find your new home..</h2>
 				<div className={`${styles.searchPanel__form}`}>
@@ -77,7 +75,7 @@ const SearchPanel = () => {
 					></button>
 					<input
 						type='text'
-						placeholder='Toronto, ON'
+						placeholder='ex: Toronto, ON'
 						className={`${styles.searchPanel__form__input}`}
 						value={inputValue}
 						onChange={inputUpdate}

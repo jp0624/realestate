@@ -1,0 +1,47 @@
+.location {
+	&__page {
+		&__container,
+		&__comments {
+			background: #fff;
+			margin: 2rem auto;
+			border: 1px solid #999;
+			padding: 2rem;
+			width: calc(100% - 4rem);
+			max-width: 1024px;
+		}
+		&__heading {
+			font-weight: 600;
+			font-size: 2rem;
+		}
+		&__subheading {
+			font-weight: 500;
+			font-size: 1.5rem;
+		}
+		&__cost {
+			color: rgb(180, 1, 1);
+			font-size: 2rem;
+			font-weight: 500;
+		}
+		&__details {
+			margin: 1rem 0;
+			font-size: 1.5rem;
+			line-height: 2rem;
+		}
+		&__images {
+			display: flex;
+			flex-direction: row;
+			align-items: stretch;
+			margin: 1rem;
+			padding: 1rem;
+			border: 1px solid #999;
+			figure {
+				display: flex;
+				flex: 1 1 0px;
+				justify-content: center;
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

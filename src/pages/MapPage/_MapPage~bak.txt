@@ -1,0 +1,216 @@
+import { useContext, useState, useCallback, useEffect, useMemo } from "react"
+import { SiteContext } from "../../context/SiteContext"
+import styles from "./styles.module.scss"
+import {
+	GoogleMap,
+	LoadScript,
+	useLoadScript,
+	Marker,
+	useJsApiLoader,
+} from "@react-google-maps/api"
+import MapMarker from "../../components/widgets/Marker/MapMarker"
+import { Routes, Route, useParams, useSearchParams } from "react-router-dom"
+import MapLocationList from "../../components/panels/MapLocationList/MapLocationList"
+import SearchPanel from "../../components/panels/SearchPanel/SearchPanel"
+
+const MapPage = () => {
+	const { mapBounds, searchValue, setSearchValue, setMapBounds } =
+		useContext(SiteContext)
+	const [searchParams, setSearchParams] = useSearchParams()
+	const [mapInstance, setMap] = useState(null) // Removed type annotation
+	const [panned, setPanned] = useState(false)
+	const [zoomed, setZoomed] = useState(false)
+	const [mapCenter, setMapCenter] = useState({
+		lat: +searchParams.get("lat")! || 43.64134360340362,
+		lng: +searchParams.get("lng")! || -79.39167602461177,
+	})
+
+	const loadMap = useCallback((map) => {
+		setMap(map)
+	}, [])
+
+	const locations: any = [
+		{
+			id: "0",
+			address: "123 main st",
+			coords: { lat: 43.64134360340362, lng: -79.39167602461177 },
+		},
+		{
+			id: "1",
+			address: "234 main st",
+			coords: { lat: 43.66314146548834, lng: -79.36395271547869 },
+		},
+		{
+			id: "2",
+			address: "23456 Blah Ave",
+			coords: { lat: 43.85917013188701, lng: -79.71591901105445 },
+		},
+		{
+			id: "3",
+			address: "934 test st",
+			coords: { lat: 43.57430421351184, lng: -79.74063824644244 },
+		},
+		{
+			id: "4",
+			address: "200 Another St",
+			coords: { lat: 43.87402135204113, lng: -79.1556163422598 },
+		},
+		{
+			id: "5",
+			address: "110 Charles Est St",
+			coords: { lat: 43.64291479171653, lng: -79.5154185462407 },
+		},
+		{
+			id: "6",
+			address: "55 Broadview Dr",
+			coords: { lat: 43.68563252315617, lng: -79.61841536035735 },
+		},
+		{
+			id: "7",
+			address: "9 Temp Blvd",
+			coords: { lat: 43.690597728409564, lng: -79.29981188202315 },
+		},
+		{
+			id: "8",
+			address: "44 Mapleleafs Rd",
+			coords: { lat: 43.620053294961146, lng: -79.3918223693007 },
+		},
+	]
+
+	const { isLoaded } = useLoadScript({
+		id: "google-map",
+		googleMapsApiKey: "AIzaSyCGqpSmMYvHjvEe97P4ecrw_Z2KzrM55Sc",
+	})
+
+	const mapProps = {
+		center: mapCenter,
+		zoom: 11,
+		options: {
+			panControl: false,
+			mapTypeControl: false,
+			scrollwheel: true,
+			styles: [
+				{
+					stylers: [
+						{ saturation: -100 },
+						{ gamma: 0.8 },
+						{ lightness: 4 },
+						{ visibility: "on" },
+					],
+				},
+			],
+		},
+	}
+	const handleZoomChanged = useCallback(() => {
+		setZoomed(true)
+	}, [])
+
+	const handleDragEnd = useCallback(() => {
+		setPanned(true)
+	}, [])
+
+	const handleMapIdle = useCallback(() => {
+		if (mapInstance && (panned || zoomed)) {
+			const bounds = mapInstance.getBounds()
+			if (bounds) {
+				const ne = bounds.getNorthEast()
+				const sw = bounds.getSouthWest()
+				const updatedBounds = {
+					ne: { lat: ne.lat(), lng: ne.lng() },
+					sw: { lat: sw.lat(), lng: sw.lng() },
+				}
+				if (
+					!mapBounds ||
+					updatedBounds.ne.lat !== mapBounds.ne?.lat ||
+					updatedBounds.ne.lng !== mapBounds.ne?.lng ||
+					updatedBounds.sw.lat !== mapBounds.sw?.lat ||
+					updatedBounds.sw.lng !== mapBounds.sw?.lng
+				) {
+					console.log("Map Bounds:", updatedBounds)
+					setMapBounds(updatedBounds)
+					setMapCenter({
+						lat: (ne.lat() + sw.lat()) / 2,
+						lng: (ne.lng() + sw.lng()) / 2,
+					})
+				}
+			}
+			setPanned(false)
+			setZoomed(false)
+		}
+	}, [mapInstance, panned, mapBounds, zoomed, setMapBounds])
+
+	useEffect(() => {
+		if (mapInstance && !mapBounds) {
+			handleMapIdle()
+		}
+	}, [mapInstance, mapBounds, handleMapIdle])
+
+	useEffect(() => {
+		console.log("Updated Map Bounds:", mapBounds)
+		filterLocations()
+	}, [mapBounds])
+
+	useEffect(() => {
+		if (mapInstance && isLoaded) {
+			const listener = mapInstance.addListener(
+				"tilesloaded",
+				handleMapIdle
+			)
+			return () => {
+				google.maps.event.removeListener(listener)
+			}
+		}
+	}, [mapInstance, isLoaded, handleMapIdle])
+
+	const filterLocations = useCallback(() => {
+		if (!mapBounds) {
+			return locations
+		}
+
+		return locations.filter((location) => {
+			const { lat, lng } = location.coords
+			return (
+				lat >= (mapBounds.sw?.lat ?? -Infinity) &&
+				lat <= (mapBounds.ne?.lat ?? Infinity) &&
+				lng >= (mapBounds.sw?.lng ?? -Infinity) &&
+				lng <= (mapBounds.ne?.lng ?? Infinity)
+			)
+		})
+	}, [mapBounds, locations])
+
+	const filteredLocations = useMemo(
+		() => filterLocations(),
+		[filterLocations]
+	)
+
+	return isLoaded ? (
+		<>
+			<GoogleMap
+				mapContainerClassName={`${styles.map__container}`}
+				center={mapProps.center}
+				zoom={mapProps.zoom}
+				options={mapProps.options}
+				onLoad={loadMap}
+				onZoomChanged={handleZoomChanged}
+				onDragEnd={handleDragEnd}
+			>
+				{filteredLocations.map((location, index) => (
+					<MapMarker
+						key={index}
+						text={location.address}
+						coords={location.coords}
+					/>
+				))}
+				{mapBounds && (
+					<MapLocationList
+						locations={filteredLocations}
+						bounds={mapBounds}
+					/>
+				)}
+				<SearchPanel pageType={"mapPage"} />
+			</GoogleMap>
+		</>
+	) : null
+}
+
+export default MapPage
