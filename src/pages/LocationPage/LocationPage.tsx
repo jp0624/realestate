@@ -1,18 +1,30 @@
 import { useParams } from "react-router-dom"
 import styles from "./styles.module.scss"
-import { useLocationsContext } from "../../helpers/GetListings"
+import { useLocationsContext } from "../../helpers/GetLocations"
 import CommentsPanel from "../../components/panels/CommentsPanel/CommentsPanel"
 import { CommentsLocationsProvider } from "../../helpers/GetComments"
 
+/**
+ * Renders the location page component.
+ */
 const LocationPage = () => {
+	// Get the id parameter from the URL
 	const { id } = useParams()
+
+	// Access the getListingById function from the locations context
 	const { getListingById } = useLocationsContext()
+
+	// Get the location object by id
 	const location = getListingById(id)
 
+	// If the location is not found, render a message
 	if (!location) {
 		return <span>Listing not found</span>
 	}
+
+	// Log the location object
 	console.log("location: ", location)
+
 	return (
 		<>
 			<div className={`${styles.location__page__container}`}>
@@ -51,6 +63,7 @@ const LocationPage = () => {
 			</div>
 			<div className={`${styles.location__page__comments}`}>
 				<CommentsLocationsProvider>
+					{/* Render the comments panel */}
 					<CommentsPanel id={id} />
 				</CommentsLocationsProvider>
 			</div>

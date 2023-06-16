@@ -2,8 +2,20 @@ import styles from "./styles.module.scss"
 import { Fade } from "react-slideshow-image"
 import "react-slideshow-image/dist/styles.css"
 
-console.log("document.title: ", document.title)
-const Body = ({ children, page }: any) => {
+/**
+ * Body component represents the main content section of the page.
+ * @param children - The child components to be rendered within the Body component.
+ * @param page - The current page type.
+ * @returns The Body component.
+ */
+const Body = ({
+	children,
+	page,
+}: {
+	children: React.ReactNode
+	page: string
+}) => {
+	// Define variables
 	let pageClass
 	const fadeImages = [
 		{
@@ -17,9 +29,7 @@ const Body = ({ children, page }: any) => {
 	]
 	const homeClass = styles.article__home
 	const interriorClass = styles.article__interrior
-	// const backgroundArr = ["background01.jpg", "background02.jpg"]
-	// const backgroundImg =
-	// 	backgroundArr[Math.floor(Math.random() * backgroundArr.length)]
+
 	return (
 		<>
 			<article
@@ -27,6 +37,7 @@ const Body = ({ children, page }: any) => {
 					page === "home" ? homeClass : interriorClass
 				} customScroll`}
 			>
+				{/* Render slideshow if the page is "home" */}
 				{page === "home" && (
 					<div className={`${styles.slide__container}`}>
 						<Fade arrows={false} pauseOnHover={false}>
@@ -35,6 +46,7 @@ const Body = ({ children, page }: any) => {
 									<img
 										style={{ width: "100%" }}
 										src={fadeImage.url}
+										alt={`Slide ${index + 1}`}
 									/>
 									<h2>{fadeImage.caption}</h2>
 								</div>

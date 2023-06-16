@@ -100,9 +100,9 @@
 				display: inline-flex;
 				height: 1rem;
 				width: 1rem;
-				-webkit-mask-image: url(./assets/img/icons/icon-x.svg);
+				-webkit-mask-image: url(/assets/img/icons/icon-x.svg);
 				-webkit-mask-size: contain;
-				mask-image: url(./assets/img/icons/icon-x.svg);
+				mask-image: url(/assets/img/icons/icon-x.svg);
 				mask-size: contain;
 			}
 			&:hover {

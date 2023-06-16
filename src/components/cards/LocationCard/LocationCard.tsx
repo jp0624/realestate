@@ -1,9 +1,9 @@
 import { useContext, useEffect } from "react"
-import { SiteContext } from "../../../context/SiteContext"
 import styles from "./styles.module.scss"
 import { NavLink } from "react-router-dom"
+import { SiteContext } from "../../../context/SiteContext"
 
-interface locationInterface {
+interface Location {
 	id: string
 	coords: {
 		lat: number
@@ -11,10 +11,19 @@ interface locationInterface {
 	}
 	address: string
 }
-const LocationCard = ({ location }: any) => {
-	const { selectedLocation, setSelectedLocation } = useContext(SiteContext)
 
-	const setActiveLocation = () => {
+interface LocationCardProps {
+	location: Location
+}
+
+const LocationCard = ({ location }: LocationCardProps): JSX.Element => {
+	const { selectedLocation, setSelectedLocation } =
+		useContext<any>(SiteContext)
+
+	/**
+	 * Sets the selected location when the card is clicked.
+	 */
+	const setActiveLocation = (): void => {
 		setSelectedLocation(location.id)
 	}
 
@@ -23,7 +32,6 @@ const LocationCard = ({ location }: any) => {
 			setSelectedLocation(location.id)
 		}
 	}, [selectedLocation, location.id])
-	console.log(location)
 
 	return (
 		<>
@@ -35,7 +43,10 @@ const LocationCard = ({ location }: any) => {
 			>
 				<div className={`${styles.location__card__details}`}>
 					<figure>
-						<img src='/assets/img/icons/icon-images.png' />
+						<img
+							src='/assets/img/icons/icon-images.png'
+							alt='Location Icon'
+						/>
 					</figure>
 					<figcaption>
 						<ul>

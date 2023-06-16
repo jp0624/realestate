@@ -12,9 +12,6 @@ const BtmNav = () => {
 					<li className={`${styles.nav__btm__container__item}`}>
 						<NavLink to='/map'>Map</NavLink>
 					</li>
-					<li className={`${styles.nav__btm__container__item}`}>
-						<NavLink to='/listings'>Listings</NavLink>
-					</li>
 				</ul>
 			</nav>
 		</>

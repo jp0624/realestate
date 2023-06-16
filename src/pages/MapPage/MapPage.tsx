@@ -2,7 +2,7 @@ import { useContext, useState, useCallback, useEffect, useMemo } from "react"
 import { GoogleMap, useLoadScript } from "@react-google-maps/api"
 import { useSearchParams } from "react-router-dom"
 import { SiteContext } from "../../context/SiteContext"
-import { useLocationsContext } from "../../helpers/GetListings"
+import { useLocationsContext } from "../../helpers/GetLocations"
 import MapLocationList from "../../components/panels/MapLocationList/MapLocationList"
 import MapMarker from "../../components/widgets/Marker/MapMarker"
 import SearchPanel from "../../components/panels/SearchPanel/SearchPanel"
@@ -82,7 +82,7 @@ const MapPage = () => {
 			return locations
 		}
 
-		return locations.filter((location: LocationInterface) => {
+		return locations.filter((location: any) => {
 			const { lat, lng } = location.coords
 			return (
 				lat >= (mapBounds.sw?.lat ?? -Infinity) &&
@@ -123,11 +123,10 @@ const MapPage = () => {
 				if (
 					!mapBounds ||
 					updatedBounds.ne?.lat !== mapBounds.ne?.lat ||
-					updatedBounds.ne.lng !== mapBounds.ne?.lng ||
+					updatedBounds.ne?.lng !== mapBounds.ne?.lng ||
 					updatedBounds.sw?.lat !== mapBounds.sw?.lat ||
 					updatedBounds.sw.lng !== mapBounds.sw?.lng
 				) {
-					console.log("Map Bounds:", updatedBounds)
 					setMapBounds(updatedBounds)
 					setMapCenter({
 						lat: (ne.lat() + sw.lat()) / 2,
@@ -174,7 +173,7 @@ const MapPage = () => {
 		if (isLoaded) {
 			const markerTimeout = setTimeout(() => {
 				setMarkers(
-					locations.map((location: LocationInterface) => ({
+					locations.map((location: any) => ({
 						lat: location.coords.lat,
 						lng: location.coords.lng,
 						location: location,

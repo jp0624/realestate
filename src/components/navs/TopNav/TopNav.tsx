@@ -12,9 +12,6 @@ const TopNav = () => {
 					<li className={`${styles.nav__top__container__item}`}>
 						<NavLink to='/map'>Map</NavLink>
 					</li>
-					<li className={`${styles.nav__top__container__item}`}>
-						<NavLink to='/listings'>Listings</NavLink>
-					</li>
 				</ul>
 			</nav>
 		</>

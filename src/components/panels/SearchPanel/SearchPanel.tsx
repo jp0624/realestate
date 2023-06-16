@@ -1,37 +1,51 @@
 import { useState, useContext } from "react"
 import { useNavigate } from "react-router-dom"
 import Geocode from "react-geocode"
-
 import { SiteContext } from "../../../context/SiteContext"
 import styles from "./styles.module.scss"
 
-////////////////////////////////
-////////////////////////////////
-////////////////////////////////
-// useMemo from react for input default
-////////////////////////////////
-////////////////////////////////
-////////////////////////////////
-const SearchPanel = ({ pageType }: any) => {
+/**
+ * SearchPanel component represents the search panel for finding locations.
+ * @param pageType - The type of page where the SearchPanel is rendered.
+ * @returns The SearchPanel component.
+ */
+const SearchPanel = ({ pageType }: { pageType: string }): JSX.Element => {
 	const { searchValue, setSearchValue, setSelectedLocation } =
 		useContext(SiteContext)
 	const [inputValue, setInput] = useState("")
 	const navigate = useNavigate()
+
+	// Configure Geocode library
 	Geocode.setApiKey("AIzaSyCGqpSmMYvHjvEe97P4ecrw_Z2KzrM55Sc")
 	Geocode.setLanguage("en")
 	Geocode.setLocationType("ROOFTOP")
 	Geocode.enableDebug()
 
-	const inputUpdate = (event: any) => {
+	/**
+	 * Handle input value update.
+	 * @param event - The input change event.
+	 */
+	const inputUpdate = (event: React.ChangeEvent<HTMLInputElement>): void => {
 		setInput(event.target.value)
 	}
-	const clearInput = () => {
+
+	/**
+	 * Clear the input value.
+	 */
+	const clearInput = (): void => {
 		setInput("")
 	}
-	const submitSearch = (event: any) => {
+
+	/**
+	 * Submit the search form.
+	 * @param event - The form submit event.
+	 */
+	const submitSearch = (event: React.FormEvent<HTMLFormElement>): void => {
 		event.preventDefault()
 		setSearchValue(inputValue)
-		setSelectedLocation("")
+		setSelectedLocation({ id: "" }) // Pass an empty SelectedLocationInterface object
+
+		// Use Geocode library to fetch coordinates for the entered address
 		Geocode.fromAddress(inputValue).then(
 			(response: any) => {
 				const { lat, lng } = response.results[0].geometry.location
@@ -40,6 +54,7 @@ const SearchPanel = ({ pageType }: any) => {
 				navigate(`/map?lat=${lat}&lng=${lng}`)
 			},
 			(error: any) => {
+				// Use default coordinates if the address lookup fails
 				const lat = 43.64134360340362
 				const lng = -79.39167602461177
 				navigate(`/map?lat=${lat}&lng=${lng}`)
@@ -47,12 +62,16 @@ const SearchPanel = ({ pageType }: any) => {
 			}
 		)
 	}
-	let initValue = ""
-	!!searchValue && (initValue = searchValue)
-	let containerStyle
-	if (!!pageType && pageType == "homePage") {
+
+	let initValue: any = ""
+	if (!!searchValue) {
+		initValue = searchValue
+	}
+
+	let containerStyle = ""
+	if (!!pageType && pageType === "homePage") {
 		containerStyle = styles.searchPanel__container__home
-	} else if (!!pageType && pageType == "mapPage") {
+	} else if (!!pageType && pageType === "mapPage") {
 		containerStyle = styles.searchPanel__container__map
 	}
 
@@ -66,11 +85,9 @@ const SearchPanel = ({ pageType }: any) => {
 				<div className={`${styles.searchPanel__form}`}>
 					<button
 						type='button'
-						className={`
-                            ${styles.searchPanel__form__clear}
-                            ${!!inputValue ? styles.visible : styles.hidden}
-                            `}
-						value={``}
+						className={`${styles.searchPanel__form__clear} ${
+							!!inputValue ? styles.visible : styles.hidden
+						}`}
 						onClick={clearInput}
 					></button>
 					<input
@@ -81,9 +98,8 @@ const SearchPanel = ({ pageType }: any) => {
 						onChange={inputUpdate}
 					/>
 					<button
-						type='button'
+						type='submit'
 						className={`${styles.searchPanel__form__search}`}
-						onClick={submitSearch}
 					>
 						Search
 					</button>

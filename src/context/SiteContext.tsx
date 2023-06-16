@@ -43,12 +43,25 @@ type SiteProviderProps = {
 	children: ReactNode
 }
 
-// SiteProvider component that wraps the children components with the SiteContext
-export const SiteProvider = ({ ...children }: SiteProviderProps) => {
+/**
+ * SiteProvider component that wraps the children components with the SiteContext.
+ * @param children - The child components to be wrapped.
+ * @returns The SiteProvider component.
+ */
+export const SiteProvider = ({ children }: SiteProviderProps) => {
 	// Define state variables and their setters using useState hook
-	const [searchValue, setSearchValue] = useState<any>([])
-	const [mapBounds, setMapBounds] = useState<any>([])
-	const [selectedLocation, setSelectedLocation] = useState<any>([])
+	const [searchValue, setSearchValue] = useState<SearchInterface>({
+		value: "",
+	})
+	const [mapBounds, setMapBounds] = useState<BoundsInterface>({
+		ne: { lat: 0, lng: 0 },
+		sw: { lat: 0, lng: 0 },
+	})
+	const [selectedLocation, setSelectedLocation] =
+		useState<SelectedLocationInterface>({
+			id: "",
+		})
+
 	return (
 		<SiteContext.Provider
 			value={{
@@ -56,10 +69,11 @@ export const SiteProvider = ({ ...children }: SiteProviderProps) => {
 				searchValue,
 				selectedLocation,
 				setMapBounds,
-				setSearchValue,
+				setSearchValue: (value: string) => setSearchValue({ value }),
 				setSelectedLocation,
 			}}
-			{...children}
-		></SiteContext.Provider>
+		>
+			{children}
+		</SiteContext.Provider>
 	)
 }
