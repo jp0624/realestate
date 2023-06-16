@@ -9,7 +9,7 @@ import { CommentsLocationsProvider } from "../../helpers/GetComments"
  */
 const LocationPage = () => {
 	// Get the id parameter from the URL
-	const { id } = useParams()
+	const { id = "" } = useParams()
 
 	// Access the getListingById function from the locations context
 	const { getListingById } = useLocationsContext()
