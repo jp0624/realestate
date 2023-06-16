@@ -1,34 +1,20 @@
 import { createContext, useContext, useEffect, useState } from "react"
-import {
-	collection,
-	query,
-	orderBy,
-	addDoc,
-	DocumentData,
-} from "firebase/firestore"
+import { collection, query, orderBy, addDoc } from "firebase/firestore"
 import { useFirestore, useFirestoreCollectionData } from "reactfire"
 
-// Create a context for comments
-const CommentsContext = createContext<{
-	comments: DocumentData[]
-	getCommentsById: (id: any) => DocumentData[]
-	addComment: (comment: any) => Promise<void>
-}>({} as any) // Use type assertion to cast an empty object as the desired type
+const CommentsContext = createContext<any>({})
 
-// Custom hook to access the comments context
 export function useCommentsContext() {
 	return useContext(CommentsContext)
 }
 
-// Provider component that wraps the children and provides the comments context
-export function CommentsLocationsProvider({
-	children,
-}: {
-	children: React.ReactNode
-}) {
+export function CommentsLocationsProvider({ children }: any) {
 	const firestore = useFirestore()
 	const commentsCollection = collection(firestore, "comments")
-	const commentsQuery = query(commentsCollection, orderBy("location", "asc"))
+	const commentsQuery = query(
+		commentsCollection,
+		orderBy("timestamp", "desc")
+	)
 	const { status, data: comments } = useFirestoreCollectionData(
 		commentsQuery,
 		{
@@ -37,20 +23,17 @@ export function CommentsLocationsProvider({
 	)
 	const [isLoading, setIsLoading] = useState(true)
 
-	// Set isLoading to false when the data retrieval is successful
 	useEffect(() => {
 		if (status === "success") {
 			setIsLoading(false)
 		}
 	}, [status])
 
-	// Get comments by ID
-	const getCommentsById = (id: any): DocumentData[] => {
+	const getCommentsById = (id: any) => {
 		return comments.filter((comment) => comment.location === id)
 	}
 
-	// Add a comment
-	const addComment = async (comment: any): Promise<void> => {
+	const addComment = async (comment: any) => {
 		try {
 			const docRef = await addDoc(commentsCollection, comment)
 		} catch (error) {
@@ -58,12 +41,10 @@ export function CommentsLocationsProvider({
 		}
 	}
 
-	// If still loading, display a loading message
 	if (isLoading) {
 		return <span>Loading...</span>
 	}
 
-	// Render the comments context provider with the children
 	return (
 		<CommentsContext.Provider
 			value={{ comments, getCommentsById, addComment }}
