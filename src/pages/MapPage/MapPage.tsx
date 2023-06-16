@@ -66,8 +66,9 @@ const MapPage = () => {
 	// Load the Google Maps script
 	const { isLoaded } = useLoadScript({
 		id: "google-map",
-		googleMapsApiKey: "AIzaSyCGqpSmMYvHjvEe97P4ecrw_Z2KzrM55Sc",
+		googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
 	})
+	console.log(import.meta.env)
 
 	// Fetch listings when locations or map instance change
 	useEffect(() => {

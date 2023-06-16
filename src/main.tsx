@@ -5,7 +5,7 @@ import { FirebaseAppProvider } from "reactfire"
 import { BrowserRouter } from "react-router-dom"
 
 const firebaseConfig = {
-	apiKey: "AIzaSyDUDte02AohNMt74sNpI_AoDODMzzz2fIw",
+	apiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
 	authDomain: "jp0624-realestate.firebaseapp.com",
 	databaseURL: "https://jp0624-realestate-default-rtdb.firebaseio.com",
 	projectId: "jp0624-realestate",

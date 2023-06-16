@@ -16,7 +16,7 @@ const SearchPanel = ({ pageType }: { pageType: string }): JSX.Element => {
 	const navigate = useNavigate()
 
 	// Configure Geocode library
-	Geocode.setApiKey("AIzaSyCGqpSmMYvHjvEe97P4ecrw_Z2KzrM55Sc")
+	Geocode.setApiKey(import.meta.env.VITE_GOOGLE_MAPS_API_KEY)
 	Geocode.setLanguage("en")
 	Geocode.setLocationType("ROOFTOP")
 	Geocode.enableDebug()
