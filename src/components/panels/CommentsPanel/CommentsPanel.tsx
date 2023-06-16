@@ -1,6 +1,7 @@
 import { useCommentsContext } from "../../../helpers/GetComments"
 import styles from "./styles.module.scss"
 import { format } from "date-fns"
+import React, { useEffect } from "react"
 
 /**
  * CommentsPanel component displays comments and allows users to add new comments.
@@ -11,6 +12,36 @@ const CommentsPanel = ({ id }: { id: string }) => {
 	const { getCommentsById, addComment } = useCommentsContext()
 
 	const locationComments = getCommentsById(id) || []
+
+	useEffect(() => {
+		const inputs = document.querySelectorAll<HTMLInputElement>(
+			"form input, form textarea"
+		)
+		inputs.forEach((input) => {
+			input.addEventListener("keyup", handleFieldChange)
+			input.addEventListener("blur", handleFieldChange)
+		})
+
+		return () => {
+			inputs.forEach((input) => {
+				input.removeEventListener("keyup", handleFieldChange)
+				input.removeEventListener("blur", handleFieldChange)
+			})
+		}
+	}, [])
+
+	const handleFieldChange = (e: Event) => {
+		const target = e.target as HTMLInputElement
+		const parentLi = target.closest("li")
+		if (parentLi) {
+			if (target.value.trim() !== "") {
+				parentLi.classList.remove("error")
+			} else {
+				parentLi.classList.add("error")
+			}
+		}
+	}
+
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault()
 		const target = e.target as HTMLFormElement
@@ -23,6 +54,28 @@ const CommentsPanel = ({ id }: { id: string }) => {
 		)
 		const name = (target.elements.namedItem("name") as HTMLInputElement)
 			?.value
+
+		// Check if any field is empty
+		if (!title || !text || !name) {
+			// Add 'error' class to the parent 'li' of empty fields
+			if (!title) {
+				;(target.elements.namedItem("title") as HTMLElement)
+					?.closest("li")
+					?.classList.add("error")
+			}
+			if (!text) {
+				;(target.elements.namedItem("comment") as HTMLElement)
+					?.closest("li")
+					?.classList.add("error")
+			}
+			if (!name) {
+				;(target.elements.namedItem("name") as HTMLElement)
+					?.closest("li")
+					?.classList.add("error")
+			}
+			return // Do not submit the form if any field is empty
+		}
+
 		const timestamp = new Date()
 		const formattedTimestamp = format(timestamp, "MMM dd, yyyy (hh:mm a)")
 		const newComment = {
@@ -33,6 +86,7 @@ const CommentsPanel = ({ id }: { id: string }) => {
 			timestamp: formattedTimestamp,
 			location: id,
 		}
+
 		addComment(newComment)
 		target.reset()
 	}
@@ -40,33 +94,37 @@ const CommentsPanel = ({ id }: { id: string }) => {
 	return (
 		<>
 			<h2 className={`${styles.comments__heading}`}>Add a Comment</h2>
+			<p>* Indicates required fields</p>
 			<form onSubmit={handleSubmit}>
 				<ul className={`${styles.comments__form}`}>
 					<li>
-						<label htmlFor='comment-name'>Name:</label>
+						<label htmlFor='comment-name'>* Name:</label>
 						<input
 							type='text'
 							id='comment-name'
 							name='name'
 							placeholder='Your name'
 						/>
+						<em>This is a required field</em>
 					</li>
 					<li>
-						<label htmlFor='comment-title'>Title:</label>
+						<label htmlFor='comment-title'>* Title:</label>
 						<input
 							type='text'
 							id='comment-title'
 							name='title'
 							placeholder='Enter title'
 						/>
+						<em>This is a required field</em>
 					</li>
 					<li>
-						<label htmlFor='comment-text'>Comment:</label>
+						<label htmlFor='comment-text'>* Comment:</label>
 						<textarea
 							name='comment'
 							id='comment-text'
 							placeholder='Type your comment here..'
 						/>
+						<em>This is a required field</em>
 					</li>
 					<li>
 						<label htmlFor='comment-rating'>Rating:</label>

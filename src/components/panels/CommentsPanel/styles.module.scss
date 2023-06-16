@@ -32,10 +32,13 @@
 		li {
 			display: flex;
 			flex-direction: column;
-			margin: 0.5rem 0;
+			margin: 1rem 0 0.5rem;
 			label {
 				width: 100%;
 				margin-bottom: 0.5rem;
+			}
+			em {
+				opacity: 0;
 			}
 			input,
 			select {
