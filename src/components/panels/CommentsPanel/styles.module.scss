@@ -33,6 +33,9 @@
 			display: flex;
 			flex-direction: column;
 			margin: 1rem 0 0.5rem;
+			&.error {
+				background-color: blue;
+			}
 			label {
 				width: 100%;
 				margin-bottom: 0.5rem;
@@ -54,6 +57,18 @@
 			button {
 				min-height: 2rem;
 				width: 25%;
+			}
+			input,
+			select,
+			textarea {
+				&.error {
+					border: 2px solid rgb(180, 1, 1);
+
+					& ~ em {
+						color: rgb(180, 1, 1);
+						opacity: 1;
+					}
+				}
 			}
 		}
 	}

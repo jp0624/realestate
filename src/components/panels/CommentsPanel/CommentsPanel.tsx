@@ -1,7 +1,7 @@
 import { useCommentsContext } from "../../../helpers/GetComments"
 import styles from "./styles.module.scss"
 import { format } from "date-fns"
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 
 /**
  * CommentsPanel component displays comments and allows users to add new comments.
@@ -12,6 +12,12 @@ const CommentsPanel = ({ id }: { id: string }) => {
 	const { getCommentsById, addComment } = useCommentsContext()
 
 	const locationComments = getCommentsById(id) || []
+
+	const [inputErrors, setInputErrors] = useState({
+		title: false,
+		comment: false,
+		name: false,
+	})
 
 	useEffect(() => {
 		const inputs = document.querySelectorAll<HTMLInputElement>(
@@ -32,14 +38,13 @@ const CommentsPanel = ({ id }: { id: string }) => {
 
 	const handleFieldChange = (e: Event) => {
 		const target = e.target as HTMLInputElement
-		const parentLi = target.closest("li")
-		if (parentLi) {
-			if (target.value.trim() !== "") {
-				parentLi.classList.remove("error")
-			} else {
-				parentLi.classList.add("error")
-			}
-		}
+		const fieldName = target.name
+		const fieldValue = target.value.trim()
+
+		setInputErrors((prevErrors) => ({
+			...prevErrors,
+			[fieldName]: fieldValue === "",
+		}))
 	}
 
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -56,24 +61,17 @@ const CommentsPanel = ({ id }: { id: string }) => {
 			?.value
 
 		// Check if any field is empty
-		if (!title || !text || !name) {
-			// Add 'error' class to the parent 'li' of empty fields
-			if (!title) {
-				;(target.elements.namedItem("title") as HTMLElement)
-					?.closest("li")
-					?.classList.add("error")
-			}
-			if (!text) {
-				;(target.elements.namedItem("comment") as HTMLElement)
-					?.closest("li")
-					?.classList.add("error")
-			}
-			if (!name) {
-				;(target.elements.namedItem("name") as HTMLElement)
-					?.closest("li")
-					?.classList.add("error")
-			}
-			return // Do not submit the form if any field is empty
+		const errors = {
+			title: !title,
+			comment: !text,
+			name: !name,
+		}
+
+		setInputErrors(errors)
+
+		// Do not submit the form if any field is empty
+		if (Object.values(errors).some((error) => error)) {
+			return
 		}
 
 		const timestamp = new Date()
@@ -93,10 +91,10 @@ const CommentsPanel = ({ id }: { id: string }) => {
 
 	return (
 		<>
-			<h2 className={`${styles.comments__heading}`}>Add a Comment</h2>
+			<h2 className={styles.comments__heading}>Add a Comment</h2>
 			<p>* Indicates required fields</p>
 			<form onSubmit={handleSubmit}>
-				<ul className={`${styles.comments__form}`}>
+				<ul className={styles.comments__form}>
 					<li>
 						<label htmlFor='comment-name'>* Name:</label>
 						<input
@@ -104,6 +102,7 @@ const CommentsPanel = ({ id }: { id: string }) => {
 							id='comment-name'
 							name='name'
 							placeholder='Your name'
+							className={inputErrors.name ? styles.error : ""}
 						/>
 						<em>This is a required field</em>
 					</li>
@@ -114,6 +113,7 @@ const CommentsPanel = ({ id }: { id: string }) => {
 							id='comment-title'
 							name='title'
 							placeholder='Enter title'
+							className={inputErrors.title ? styles.error : ""}
 						/>
 						<em>This is a required field</em>
 					</li>
@@ -123,6 +123,7 @@ const CommentsPanel = ({ id }: { id: string }) => {
 							name='comment'
 							id='comment-text'
 							placeholder='Type your comment here..'
+							className={inputErrors.comment ? styles.error : ""}
 						/>
 						<em>This is a required field</em>
 					</li>
@@ -143,34 +144,25 @@ const CommentsPanel = ({ id }: { id: string }) => {
 				</ul>
 			</form>
 
-			<h2 className={`${styles.comments__heading}`}>Comments</h2>
+			<h2 className={styles.comments__heading}>Comments</h2>
 			{locationComments.length === 0 && <p>No comments to display</p>}
 			{locationComments.length > 0 && (
-				<ul className={`${styles.comments__container}`}>
+				<ul className={styles.comments__container}>
 					{locationComments.map((comment: any, index: number) => (
-						<li
-							key={index}
-							className={`${styles.comments__comment}`}
-						>
-							<h3
-								className={`${styles.comments__comment__title}`}
-							>
+						<li key={index} className={styles.comments__comment}>
+							<h3 className={styles.comments__comment__title}>
 								{comment.title}
 							</h3>
-							<h4 className={`${styles.comments__comment__time}`}>
+							<h4 className={styles.comments__comment__time}>
 								{comment.timestamp}
 							</h4>
-							<p className={`${styles.comments__comment__text}`}>
+							<p className={styles.comments__comment__text}>
 								{comment.text}
 							</p>
-							<p
-								className={`${styles.comments__comment__rating}`}
-							>
+							<p className={styles.comments__comment__rating}>
 								Rating: {comment.rating}
 							</p>
-							<p
-								className={`${styles.comments__comment__author}`}
-							>
+							<p className={styles.comments__comment__author}>
 								By: {comment.name}
 							</p>
 						</li>
