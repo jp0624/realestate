@@ -1,7 +1,12 @@
+@import "../../../styles/_media";
 .article {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+
+	@include mq(md) {
+		overflow-x: hidden;
+	}
 	&__home {
 		.slide {
 			&__container {
