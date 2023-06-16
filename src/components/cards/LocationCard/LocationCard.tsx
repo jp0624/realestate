@@ -10,6 +10,7 @@ interface Location {
 		lng: number
 	}
 	address: string
+	cost: string
 }
 
 interface LocationCardProps {
@@ -50,8 +51,11 @@ const LocationCard = ({ location }: LocationCardProps): JSX.Element => {
 					</figure>
 					<figcaption>
 						<ul>
-							<li>
-								{location.id} - {location.address}
+							<li className={`${styles.location__card__address}`}>
+								{location.address}
+							</li>
+							<li className={`${styles.location__card__cost}`}>
+								{location.cost}
 							</li>
 						</ul>
 					</figcaption>
