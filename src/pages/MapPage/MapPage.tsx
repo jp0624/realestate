@@ -68,7 +68,6 @@ const MapPage = () => {
 		id: "google-map",
 		googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
 	})
-	console.log(import.meta.env)
 
 	// Fetch listings when locations or map instance change
 	useEffect(() => {

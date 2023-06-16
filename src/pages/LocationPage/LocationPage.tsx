@@ -22,9 +22,6 @@ const LocationPage = () => {
 		return <span>Listing not found</span>
 	}
 
-	// Log the location object
-	console.log("location: ", location)
-
 	return (
 		<>
 			<div className={`${styles.location__page__container}`}>
