@@ -11,7 +11,6 @@ body,
 	height: 100%;
 }
 body {
-	min-width: 1300px;
 	background: #111;
 }
 #root {
@@ -60,6 +59,16 @@ footer {
 		border: 2px solid red;
 		em {
 			opacity: 1;
+		}
+	}
+}
+[aria-roledescription="carousel"] {
+	height: 100%;
+	div {
+		height: 100%;
+		img {
+			height: 100%;
+			width: auto;
 		}
 	}
 }
