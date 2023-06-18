@@ -5,6 +5,11 @@
 		justify-content: end;
 		width: 80%;
 		right: 0;
+		@import "../../../styles/_media";
+		@include mq(md) {
+			width: 50%;
+			box-sizing: border-box;
+		}
 		&__container {
 			display: flex;
 			flex-direction: row;
