@@ -1,0 +1,3080 @@
+[
+  {
+    "id": "1",
+    "slug": "12-cedarview-lane",
+    "address": "12 Cedarview Lane",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "The Annex",
+    "type": "Semi-detached",
+    "beds": 3,
+    "baths": 3,
+    "sqft": 1700,
+    "parking": 1,
+    "price": 1295000,
+    "status": "For sale",
+    "daysListed": 1,
+    "featured": true,
+    "headline": "A classic facade. A fresh way to live.",
+    "description": "Thoughtfully arranged living spaces, a practical kitchen and a private outdoor retreat give this home an easy everyday rhythm. Tree-lined streets, independent shops and convenient access to the subway.",
+    "highlights": [
+      "Private garden",
+      "Main-floor powder room",
+      "Flexible lower level",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.668,
+      "lng": -79.413
+    },
+    "images": [
+      "/images/properties/exterior-01.webp",
+      "/images/properties/interior-01.webp",
+      "/images/properties/interior-07.webp",
+      "/images/properties/interior-13.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.1 × 4.2 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 8418,
+    "demo": true
+  },
+  {
+    "id": "2",
+    "slug": "14-cedarview-lane",
+    "address": "14 Cedarview Lane",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "The Annex",
+    "type": "Detached",
+    "beds": 4,
+    "baths": 4,
+    "sqft": 2450,
+    "parking": 2,
+    "price": 2107500,
+    "status": "For sale",
+    "daysListed": 8,
+    "featured": false,
+    "headline": "Space for the way you live now.",
+    "description": "An open main floor balances shared spaces with quiet corners. Large windows, a generous kitchen and comfortable bedrooms support both family life and hosting. Tree-lined streets, independent shops and convenient access to the subway.",
+    "highlights": [
+      "Open-plan kitchen",
+      "Primary ensuite",
+      "Private driveway",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.671,
+      "lng": -79.41
+    },
+    "images": [
+      "/images/properties/exterior-02.webp",
+      "/images/properties/interior-02.webp",
+      "/images/properties/interior-08.webp",
+      "/images/properties/interior-14.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.3 × 4.4 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 13699,
+    "demo": true
+  },
+  {
+    "id": "3",
+    "slug": "16-cedarview-lane",
+    "address": "16 Cedarview Lane",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "The Annex",
+    "type": "Townhouse",
+    "beds": 3,
+    "baths": 3,
+    "sqft": 1550,
+    "parking": 1,
+    "price": 1020000,
+    "status": "For sale",
+    "daysListed": 15,
+    "featured": false,
+    "headline": "Considered spaces, from top to bottom.",
+    "description": "A bright, efficient layout brings living, dining and entertaining together. A separate workspace and outdoor area add flexibility without unnecessary upkeep. Tree-lined streets, independent shops and convenient access to the subway.",
+    "highlights": [
+      "Dedicated workspace",
+      "Outdoor terrace",
+      "Attached garage",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.674,
+      "lng": -79.407
+    },
+    "images": [
+      "/images/properties/exterior-03.webp",
+      "/images/properties/interior-03.webp",
+      "/images/properties/interior-09.webp",
+      "/images/properties/interior-15.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.5 × 4.2 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 6630,
+    "demo": true
+  },
+  {
+    "id": "4",
+    "slug": "18-cedarview-lane",
+    "address": "18 Cedarview Lane",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "The Annex",
+    "type": "Condo",
+    "beds": 2,
+    "baths": 2,
+    "sqft": 980,
+    "parking": 1,
+    "price": 689000,
+    "status": "For sale",
+    "daysListed": 22,
+    "featured": true,
+    "headline": "A quieter home above the city.",
+    "description": "Daylight reaches the living and dining areas through broad windows. A well-planned kitchen, useful storage and a private balcony make this suite easy to settle into. Tree-lined streets, independent shops and convenient access to the subway.",
+    "highlights": [
+      "Private balcony",
+      "In-suite laundry",
+      "Underground parking",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.668,
+      "lng": -79.404
+    },
+    "images": [
+      "/images/properties/exterior-04.webp",
+      "/images/properties/interior-04.webp",
+      "/images/properties/interior-10.webp",
+      "/images/properties/interior-16.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.1 × 4.4 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 650,
+    "taxes": 4478,
+    "demo": true
+  },
+  {
+    "id": "5",
+    "slug": "20-cedarview-lane",
+    "address": "20 Cedarview Lane",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "The Annex",
+    "type": "Loft",
+    "beds": 2,
+    "baths": 2,
+    "sqft": 1250,
+    "parking": 0,
+    "price": 937500,
+    "status": "For sale",
+    "daysListed": 29,
+    "featured": false,
+    "headline": "Character you can build a home around.",
+    "description": "Industrial proportions meet warm finishes in an open living space. High ceilings and a flexible layout leave room for work, dining and a comfortable place to switch off. Tree-lined streets, independent shops and convenient access to the subway.",
+    "highlights": [
+      "High ceilings",
+      "Open living area",
+      "Flexible den",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.671,
+      "lng": -79.401
+    },
+    "images": [
+      "/images/properties/exterior-05.webp",
+      "/images/properties/interior-05.webp",
+      "/images/properties/interior-11.webp",
+      "/images/properties/interior-17.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.3 × 4.2 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 650,
+    "taxes": 6094,
+    "demo": true
+  },
+  {
+    "id": "6",
+    "slug": "22-cedarview-lane",
+    "address": "22 Cedarview Lane",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "The Annex",
+    "type": "Detached",
+    "beds": 4,
+    "baths": 3,
+    "sqft": 2200,
+    "parking": 2,
+    "price": 1420000,
+    "status": "For sale",
+    "daysListed": 1,
+    "featured": false,
+    "headline": "Room to grow, inside and out.",
+    "description": "Distinct living areas, a generous kitchen and a sheltered backyard give everyone room to spread out. The bedroom level keeps private spaces separate from daily activity. Tree-lined streets, independent shops and convenient access to the subway.",
+    "highlights": [
+      "Fenced backyard",
+      "Family room",
+      "Double driveway",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.674,
+      "lng": -79.413
+    },
+    "images": [
+      "/images/properties/exterior-06.webp",
+      "/images/properties/interior-06.webp",
+      "/images/properties/interior-12.webp",
+      "/images/properties/interior-18.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.5 × 4.4 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 9230,
+    "demo": true
+  },
+  {
+    "id": "7",
+    "slug": "19-juniper-mews",
+    "address": "19 Juniper Mews",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "Leslieville",
+    "type": "Semi-detached",
+    "beds": 3,
+    "baths": 3,
+    "sqft": 1725,
+    "parking": 1,
+    "price": 1320000,
+    "status": "For sale",
+    "daysListed": 8,
+    "featured": false,
+    "headline": "A classic facade. A fresh way to live.",
+    "description": "Thoughtfully arranged living spaces, a practical kitchen and a private outdoor retreat give this home an easy everyday rhythm. Neighbourhood cafés, local markets and parks make everyday errands easy.",
+    "highlights": [
+      "Private garden",
+      "Main-floor powder room",
+      "Flexible lower level",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.66,
+      "lng": -79.331
+    },
+    "images": [
+      "/images/properties/exterior-07.webp",
+      "/images/properties/interior-01.webp",
+      "/images/properties/interior-07.webp",
+      "/images/properties/interior-13.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.1 × 4.2 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 8580,
+    "demo": true
+  },
+  {
+    "id": "8",
+    "slug": "21-juniper-mews",
+    "address": "21 Juniper Mews",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "Leslieville",
+    "type": "Detached",
+    "beds": 4,
+    "baths": 4,
+    "sqft": 2475,
+    "parking": 2,
+    "price": 2850,
+    "status": "For lease",
+    "daysListed": 15,
+    "featured": true,
+    "headline": "Space for the way you live now.",
+    "description": "An open main floor balances shared spaces with quiet corners. Large windows, a generous kitchen and comfortable bedrooms support both family life and hosting. Neighbourhood cafés, local markets and parks make everyday errands easy.",
+    "highlights": [
+      "Open-plan kitchen",
+      "Primary ensuite",
+      "Private driveway",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.663,
+      "lng": -79.328
+    },
+    "images": [
+      "/images/properties/exterior-08.webp",
+      "/images/properties/interior-02.webp",
+      "/images/properties/interior-08.webp",
+      "/images/properties/interior-14.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.3 × 4.4 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 0,
+    "demo": true
+  },
+  {
+    "id": "9",
+    "slug": "23-juniper-mews",
+    "address": "23 Juniper Mews",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "Leslieville",
+    "type": "Townhouse",
+    "beds": 3,
+    "baths": 3,
+    "sqft": 1575,
+    "parking": 1,
+    "price": 1045000,
+    "status": "For sale",
+    "daysListed": 22,
+    "featured": false,
+    "headline": "Considered spaces, from top to bottom.",
+    "description": "A bright, efficient layout brings living, dining and entertaining together. A separate workspace and outdoor area add flexibility without unnecessary upkeep. Neighbourhood cafés, local markets and parks make everyday errands easy.",
+    "highlights": [
+      "Dedicated workspace",
+      "Outdoor terrace",
+      "Attached garage",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.666,
+      "lng": -79.325
+    },
+    "images": [
+      "/images/properties/exterior-09.webp",
+      "/images/properties/interior-03.webp",
+      "/images/properties/interior-09.webp",
+      "/images/properties/interior-15.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.5 × 4.2 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 6792,
+    "demo": true
+  },
+  {
+    "id": "10",
+    "slug": "25-juniper-mews",
+    "address": "25 Juniper Mews",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "Leslieville",
+    "type": "Condo",
+    "beds": 2,
+    "baths": 2,
+    "sqft": 1005,
+    "parking": 1,
+    "price": 714000,
+    "status": "For sale",
+    "daysListed": 29,
+    "featured": false,
+    "headline": "A quieter home above the city.",
+    "description": "Daylight reaches the living and dining areas through broad windows. A well-planned kitchen, useful storage and a private balcony make this suite easy to settle into. Neighbourhood cafés, local markets and parks make everyday errands easy.",
+    "highlights": [
+      "Private balcony",
+      "In-suite laundry",
+      "Underground parking",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.66,
+      "lng": -79.322
+    },
+    "images": [
+      "/images/properties/exterior-10.webp",
+      "/images/properties/interior-04.webp",
+      "/images/properties/interior-10.webp",
+      "/images/properties/interior-16.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.1 × 4.4 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 650,
+    "taxes": 4641,
+    "demo": true
+  },
+  {
+    "id": "11",
+    "slug": "27-juniper-mews",
+    "address": "27 Juniper Mews",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "Leslieville",
+    "type": "Loft",
+    "beds": 2,
+    "baths": 2,
+    "sqft": 1275,
+    "parking": 0,
+    "price": 962500,
+    "status": "For sale",
+    "daysListed": 1,
+    "featured": false,
+    "headline": "Character you can build a home around.",
+    "description": "Industrial proportions meet warm finishes in an open living space. High ceilings and a flexible layout leave room for work, dining and a comfortable place to switch off. Neighbourhood cafés, local markets and parks make everyday errands easy.",
+    "highlights": [
+      "High ceilings",
+      "Open living area",
+      "Flexible den",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.663,
+      "lng": -79.334
+    },
+    "images": [
+      "/images/properties/exterior-11.webp",
+      "/images/properties/interior-05.webp",
+      "/images/properties/interior-11.webp",
+      "/images/properties/interior-17.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.3 × 4.2 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 650,
+    "taxes": 6256,
+    "demo": true
+  },
+  {
+    "id": "12",
+    "slug": "29-juniper-mews",
+    "address": "29 Juniper Mews",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "Leslieville",
+    "type": "Detached",
+    "beds": 4,
+    "baths": 3,
+    "sqft": 2225,
+    "parking": 2,
+    "price": 1445000,
+    "status": "For sale",
+    "daysListed": 8,
+    "featured": false,
+    "headline": "Room to grow, inside and out.",
+    "description": "Distinct living areas, a generous kitchen and a sheltered backyard give everyone room to spread out. The bedroom level keeps private spaces separate from daily activity. Neighbourhood cafés, local markets and parks make everyday errands easy.",
+    "highlights": [
+      "Fenced backyard",
+      "Family room",
+      "Double driveway",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.666,
+      "lng": -79.331
+    },
+    "images": [
+      "/images/properties/exterior-12.webp",
+      "/images/properties/interior-06.webp",
+      "/images/properties/interior-12.webp",
+      "/images/properties/interior-18.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.5 × 4.4 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 9392,
+    "demo": true
+  },
+  {
+    "id": "13",
+    "slug": "26-linden-grove",
+    "address": "26 Linden Grove",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "Roncesvalles",
+    "type": "Semi-detached",
+    "beds": 3,
+    "baths": 3,
+    "sqft": 1750,
+    "parking": 1,
+    "price": 1345000,
+    "status": "For sale",
+    "daysListed": 15,
+    "featured": true,
+    "headline": "A classic facade. A fresh way to live.",
+    "description": "Thoughtfully arranged living spaces, a practical kitchen and a private outdoor retreat give this home an easy everyday rhythm. Walkable village shops, streetcar connections and access to High Park.",
+    "highlights": [
+      "Private garden",
+      "Main-floor powder room",
+      "Flexible lower level",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.644,
+      "lng": -79.449
+    },
+    "images": [
+      "/images/properties/exterior-13.webp",
+      "/images/properties/interior-01.webp",
+      "/images/properties/interior-07.webp",
+      "/images/properties/interior-13.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.1 × 4.2 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 8742,
+    "demo": true
+  },
+  {
+    "id": "14",
+    "slug": "28-linden-grove",
+    "address": "28 Linden Grove",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "Roncesvalles",
+    "type": "Detached",
+    "beds": 4,
+    "baths": 4,
+    "sqft": 2500,
+    "parking": 2,
+    "price": 2157500,
+    "status": "For sale",
+    "daysListed": 22,
+    "featured": false,
+    "headline": "Space for the way you live now.",
+    "description": "An open main floor balances shared spaces with quiet corners. Large windows, a generous kitchen and comfortable bedrooms support both family life and hosting. Walkable village shops, streetcar connections and access to High Park.",
+    "highlights": [
+      "Open-plan kitchen",
+      "Primary ensuite",
+      "Private driveway",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.647,
+      "lng": -79.446
+    },
+    "images": [
+      "/images/properties/exterior-14.webp",
+      "/images/properties/interior-02.webp",
+      "/images/properties/interior-08.webp",
+      "/images/properties/interior-14.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.3 × 4.4 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 14024,
+    "demo": true
+  },
+  {
+    "id": "15",
+    "slug": "30-linden-grove",
+    "address": "30 Linden Grove",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "Roncesvalles",
+    "type": "Townhouse",
+    "beds": 3,
+    "baths": 3,
+    "sqft": 1600,
+    "parking": 1,
+    "price": 1070000,
+    "status": "For sale",
+    "daysListed": 29,
+    "featured": false,
+    "headline": "Considered spaces, from top to bottom.",
+    "description": "A bright, efficient layout brings living, dining and entertaining together. A separate workspace and outdoor area add flexibility without unnecessary upkeep. Walkable village shops, streetcar connections and access to High Park.",
+    "highlights": [
+      "Dedicated workspace",
+      "Outdoor terrace",
+      "Attached garage",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.65,
+      "lng": -79.443
+    },
+    "images": [
+      "/images/properties/exterior-15.webp",
+      "/images/properties/interior-03.webp",
+      "/images/properties/interior-09.webp",
+      "/images/properties/interior-15.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.5 × 4.2 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 6955,
+    "demo": true
+  },
+  {
+    "id": "16",
+    "slug": "32-linden-grove",
+    "address": "32 Linden Grove",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "Roncesvalles",
+    "type": "Condo",
+    "beds": 2,
+    "baths": 2,
+    "sqft": 1030,
+    "parking": 1,
+    "price": 739000,
+    "status": "For sale",
+    "daysListed": 1,
+    "featured": false,
+    "headline": "A quieter home above the city.",
+    "description": "Daylight reaches the living and dining areas through broad windows. A well-planned kitchen, useful storage and a private balcony make this suite easy to settle into. Walkable village shops, streetcar connections and access to High Park.",
+    "highlights": [
+      "Private balcony",
+      "In-suite laundry",
+      "Underground parking",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.644,
+      "lng": -79.455
+    },
+    "images": [
+      "/images/properties/exterior-16.webp",
+      "/images/properties/interior-04.webp",
+      "/images/properties/interior-10.webp",
+      "/images/properties/interior-16.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.1 × 4.4 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 650,
+    "taxes": 4804,
+    "demo": true
+  },
+  {
+    "id": "17",
+    "slug": "34-linden-grove",
+    "address": "34 Linden Grove",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "Roncesvalles",
+    "type": "Loft",
+    "beds": 2,
+    "baths": 2,
+    "sqft": 1300,
+    "parking": 0,
+    "price": 987500,
+    "status": "For sale",
+    "daysListed": 8,
+    "featured": false,
+    "headline": "Character you can build a home around.",
+    "description": "Industrial proportions meet warm finishes in an open living space. High ceilings and a flexible layout leave room for work, dining and a comfortable place to switch off. Walkable village shops, streetcar connections and access to High Park.",
+    "highlights": [
+      "High ceilings",
+      "Open living area",
+      "Flexible den",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.647,
+      "lng": -79.452
+    },
+    "images": [
+      "/images/properties/exterior-17.webp",
+      "/images/properties/interior-05.webp",
+      "/images/properties/interior-11.webp",
+      "/images/properties/interior-17.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.3 × 4.2 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 650,
+    "taxes": 6419,
+    "demo": true
+  },
+  {
+    "id": "18",
+    "slug": "36-linden-grove",
+    "address": "36 Linden Grove",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "Roncesvalles",
+    "type": "Detached",
+    "beds": 4,
+    "baths": 3,
+    "sqft": 2250,
+    "parking": 2,
+    "price": 1470000,
+    "status": "For sale",
+    "daysListed": 15,
+    "featured": false,
+    "headline": "Room to grow, inside and out.",
+    "description": "Distinct living areas, a generous kitchen and a sheltered backyard give everyone room to spread out. The bedroom level keeps private spaces separate from daily activity. Walkable village shops, streetcar connections and access to High Park.",
+    "highlights": [
+      "Fenced backyard",
+      "Family room",
+      "Double driveway",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.65,
+      "lng": -79.449
+    },
+    "images": [
+      "/images/properties/exterior-18.webp",
+      "/images/properties/interior-06.webp",
+      "/images/properties/interior-12.webp",
+      "/images/properties/interior-18.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.5 × 4.4 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 9555,
+    "demo": true
+  },
+  {
+    "id": "19",
+    "slug": "33-willowbank-terrace",
+    "address": "33 Willowbank Terrace",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "The Beaches",
+    "type": "Semi-detached",
+    "beds": 3,
+    "baths": 3,
+    "sqft": 1775,
+    "parking": 1,
+    "price": 4250,
+    "status": "For lease",
+    "daysListed": 22,
+    "featured": false,
+    "headline": "A classic facade. A fresh way to live.",
+    "description": "Thoughtfully arranged living spaces, a practical kitchen and a private outdoor retreat give this home an easy everyday rhythm. Lakefront paths, neighbourhood shops and relaxed residential streets.",
+    "highlights": [
+      "Private garden",
+      "Main-floor powder room",
+      "Flexible lower level",
+      "Near waterfront trails"
+    ],
+    "coords": {
+      "lat": 43.668,
+      "lng": -79.292
+    },
+    "images": [
+      "/images/properties/exterior-19.webp",
+      "/images/properties/interior-01.webp",
+      "/images/properties/interior-07.webp",
+      "/images/properties/interior-13.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.1 × 4.2 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 0,
+    "demo": true
+  },
+  {
+    "id": "20",
+    "slug": "35-willowbank-terrace",
+    "address": "35 Willowbank Terrace",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "The Beaches",
+    "type": "Detached",
+    "beds": 4,
+    "baths": 4,
+    "sqft": 2525,
+    "parking": 2,
+    "price": 2182500,
+    "status": "For sale",
+    "daysListed": 29,
+    "featured": true,
+    "headline": "Space for the way you live now.",
+    "description": "An open main floor balances shared spaces with quiet corners. Large windows, a generous kitchen and comfortable bedrooms support both family life and hosting. Lakefront paths, neighbourhood shops and relaxed residential streets.",
+    "highlights": [
+      "Open-plan kitchen",
+      "Primary ensuite",
+      "Private driveway",
+      "Near waterfront trails"
+    ],
+    "coords": {
+      "lat": 43.671,
+      "lng": -79.289
+    },
+    "images": [
+      "/images/properties/exterior-20.webp",
+      "/images/properties/interior-02.webp",
+      "/images/properties/interior-08.webp",
+      "/images/properties/interior-14.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.3 × 4.4 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 14186,
+    "demo": true
+  },
+  {
+    "id": "21",
+    "slug": "37-willowbank-terrace",
+    "address": "37 Willowbank Terrace",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "The Beaches",
+    "type": "Townhouse",
+    "beds": 3,
+    "baths": 3,
+    "sqft": 1625,
+    "parking": 1,
+    "price": 1095000,
+    "status": "For sale",
+    "daysListed": 1,
+    "featured": false,
+    "headline": "Considered spaces, from top to bottom.",
+    "description": "A bright, efficient layout brings living, dining and entertaining together. A separate workspace and outdoor area add flexibility without unnecessary upkeep. Lakefront paths, neighbourhood shops and relaxed residential streets.",
+    "highlights": [
+      "Dedicated workspace",
+      "Outdoor terrace",
+      "Attached garage",
+      "Near waterfront trails"
+    ],
+    "coords": {
+      "lat": 43.674,
+      "lng": -79.301
+    },
+    "images": [
+      "/images/properties/exterior-21.webp",
+      "/images/properties/interior-03.webp",
+      "/images/properties/interior-09.webp",
+      "/images/properties/interior-15.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.5 × 4.2 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 7118,
+    "demo": true
+  },
+  {
+    "id": "22",
+    "slug": "39-willowbank-terrace",
+    "address": "39 Willowbank Terrace",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "The Beaches",
+    "type": "Condo",
+    "beds": 2,
+    "baths": 2,
+    "sqft": 1055,
+    "parking": 1,
+    "price": 764000,
+    "status": "For sale",
+    "daysListed": 8,
+    "featured": false,
+    "headline": "A quieter home above the city.",
+    "description": "Daylight reaches the living and dining areas through broad windows. A well-planned kitchen, useful storage and a private balcony make this suite easy to settle into. Lakefront paths, neighbourhood shops and relaxed residential streets.",
+    "highlights": [
+      "Private balcony",
+      "In-suite laundry",
+      "Underground parking",
+      "Near waterfront trails"
+    ],
+    "coords": {
+      "lat": 43.668,
+      "lng": -79.298
+    },
+    "images": [
+      "/images/properties/exterior-22.webp",
+      "/images/properties/interior-04.webp",
+      "/images/properties/interior-10.webp",
+      "/images/properties/interior-16.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.1 × 4.4 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 650,
+    "taxes": 4966,
+    "demo": true
+  },
+  {
+    "id": "23",
+    "slug": "41-willowbank-terrace",
+    "address": "41 Willowbank Terrace",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "The Beaches",
+    "type": "Loft",
+    "beds": 2,
+    "baths": 2,
+    "sqft": 1325,
+    "parking": 0,
+    "price": 1012500,
+    "status": "For sale",
+    "daysListed": 15,
+    "featured": false,
+    "headline": "Character you can build a home around.",
+    "description": "Industrial proportions meet warm finishes in an open living space. High ceilings and a flexible layout leave room for work, dining and a comfortable place to switch off. Lakefront paths, neighbourhood shops and relaxed residential streets.",
+    "highlights": [
+      "High ceilings",
+      "Open living area",
+      "Flexible den",
+      "Near waterfront trails"
+    ],
+    "coords": {
+      "lat": 43.671,
+      "lng": -79.295
+    },
+    "images": [
+      "/images/properties/exterior-23.webp",
+      "/images/properties/interior-05.webp",
+      "/images/properties/interior-11.webp",
+      "/images/properties/interior-17.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.3 × 4.2 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 650,
+    "taxes": 6581,
+    "demo": true
+  },
+  {
+    "id": "24",
+    "slug": "43-willowbank-terrace",
+    "address": "43 Willowbank Terrace",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "The Beaches",
+    "type": "Detached",
+    "beds": 4,
+    "baths": 3,
+    "sqft": 2275,
+    "parking": 2,
+    "price": 1495000,
+    "status": "For sale",
+    "daysListed": 22,
+    "featured": false,
+    "headline": "Room to grow, inside and out.",
+    "description": "Distinct living areas, a generous kitchen and a sheltered backyard give everyone room to spread out. The bedroom level keeps private spaces separate from daily activity. Lakefront paths, neighbourhood shops and relaxed residential streets.",
+    "highlights": [
+      "Fenced backyard",
+      "Family room",
+      "Double driveway",
+      "Near waterfront trails"
+    ],
+    "coords": {
+      "lat": 43.674,
+      "lng": -79.292
+    },
+    "images": [
+      "/images/properties/exterior-24.webp",
+      "/images/properties/interior-06.webp",
+      "/images/properties/interior-12.webp",
+      "/images/properties/interior-18.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.5 × 4.4 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 9718,
+    "demo": true
+  },
+  {
+    "id": "25",
+    "slug": "40-garden-walk",
+    "address": "40 Garden Walk",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "Davisville",
+    "type": "Semi-detached",
+    "beds": 3,
+    "baths": 3,
+    "sqft": 1800,
+    "parking": 1,
+    "price": 1395000,
+    "status": "For sale",
+    "daysListed": 29,
+    "featured": false,
+    "headline": "A classic facade. A fresh way to live.",
+    "description": "Thoughtfully arranged living spaces, a practical kitchen and a private outdoor retreat give this home an easy everyday rhythm. Midtown convenience with nearby transit, restaurants and green space.",
+    "highlights": [
+      "Private garden",
+      "Main-floor powder room",
+      "Flexible lower level",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.696,
+      "lng": -79.384
+    },
+    "images": [
+      "/images/properties/exterior-25.webp",
+      "/images/properties/interior-01.webp",
+      "/images/properties/interior-07.webp",
+      "/images/properties/interior-13.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.1 × 4.2 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 9068,
+    "demo": true
+  },
+  {
+    "id": "26",
+    "slug": "42-garden-walk",
+    "address": "42 Garden Walk",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "Davisville",
+    "type": "Detached",
+    "beds": 4,
+    "baths": 4,
+    "sqft": 2550,
+    "parking": 2,
+    "price": 2207500,
+    "status": "For sale",
+    "daysListed": 1,
+    "featured": false,
+    "headline": "Space for the way you live now.",
+    "description": "An open main floor balances shared spaces with quiet corners. Large windows, a generous kitchen and comfortable bedrooms support both family life and hosting. Midtown convenience with nearby transit, restaurants and green space.",
+    "highlights": [
+      "Open-plan kitchen",
+      "Primary ensuite",
+      "Private driveway",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.699,
+      "lng": -79.396
+    },
+    "images": [
+      "/images/properties/exterior-26.webp",
+      "/images/properties/interior-02.webp",
+      "/images/properties/interior-08.webp",
+      "/images/properties/interior-14.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.3 × 4.4 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 14349,
+    "demo": true
+  },
+  {
+    "id": "27",
+    "slug": "44-garden-walk",
+    "address": "44 Garden Walk",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "Davisville",
+    "type": "Townhouse",
+    "beds": 3,
+    "baths": 3,
+    "sqft": 1650,
+    "parking": 1,
+    "price": 1120000,
+    "status": "For sale",
+    "daysListed": 8,
+    "featured": false,
+    "headline": "Considered spaces, from top to bottom.",
+    "description": "A bright, efficient layout brings living, dining and entertaining together. A separate workspace and outdoor area add flexibility without unnecessary upkeep. Midtown convenience with nearby transit, restaurants and green space.",
+    "highlights": [
+      "Dedicated workspace",
+      "Outdoor terrace",
+      "Attached garage",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.702,
+      "lng": -79.393
+    },
+    "images": [
+      "/images/properties/exterior-27.webp",
+      "/images/properties/interior-03.webp",
+      "/images/properties/interior-09.webp",
+      "/images/properties/interior-15.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.5 × 4.2 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 7280,
+    "demo": true
+  },
+  {
+    "id": "28",
+    "slug": "46-garden-walk",
+    "address": "46 Garden Walk",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "Davisville",
+    "type": "Condo",
+    "beds": 2,
+    "baths": 2,
+    "sqft": 1080,
+    "parking": 1,
+    "price": 789000,
+    "status": "For sale",
+    "daysListed": 15,
+    "featured": false,
+    "headline": "A quieter home above the city.",
+    "description": "Daylight reaches the living and dining areas through broad windows. A well-planned kitchen, useful storage and a private balcony make this suite easy to settle into. Midtown convenience with nearby transit, restaurants and green space.",
+    "highlights": [
+      "Private balcony",
+      "In-suite laundry",
+      "Underground parking",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.696,
+      "lng": -79.39
+    },
+    "images": [
+      "/images/properties/exterior-28.webp",
+      "/images/properties/interior-04.webp",
+      "/images/properties/interior-10.webp",
+      "/images/properties/interior-16.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.1 × 4.4 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 650,
+    "taxes": 5128,
+    "demo": true
+  },
+  {
+    "id": "29",
+    "slug": "48-garden-walk",
+    "address": "48 Garden Walk",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "Davisville",
+    "type": "Loft",
+    "beds": 2,
+    "baths": 2,
+    "sqft": 1350,
+    "parking": 0,
+    "price": 1037500,
+    "status": "For sale",
+    "daysListed": 22,
+    "featured": true,
+    "headline": "Character you can build a home around.",
+    "description": "Industrial proportions meet warm finishes in an open living space. High ceilings and a flexible layout leave room for work, dining and a comfortable place to switch off. Midtown convenience with nearby transit, restaurants and green space.",
+    "highlights": [
+      "High ceilings",
+      "Open living area",
+      "Flexible den",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.699,
+      "lng": -79.387
+    },
+    "images": [
+      "/images/properties/exterior-29.webp",
+      "/images/properties/interior-05.webp",
+      "/images/properties/interior-11.webp",
+      "/images/properties/interior-17.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.3 × 4.2 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 650,
+    "taxes": 6744,
+    "demo": true
+  },
+  {
+    "id": "30",
+    "slug": "50-garden-walk",
+    "address": "50 Garden Walk",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "Davisville",
+    "type": "Detached",
+    "beds": 4,
+    "baths": 3,
+    "sqft": 2300,
+    "parking": 2,
+    "price": 3200,
+    "status": "For lease",
+    "daysListed": 29,
+    "featured": false,
+    "headline": "Room to grow, inside and out.",
+    "description": "Distinct living areas, a generous kitchen and a sheltered backyard give everyone room to spread out. The bedroom level keeps private spaces separate from daily activity. Midtown convenience with nearby transit, restaurants and green space.",
+    "highlights": [
+      "Fenced backyard",
+      "Family room",
+      "Double driveway",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.702,
+      "lng": -79.384
+    },
+    "images": [
+      "/images/properties/exterior-30.webp",
+      "/images/properties/interior-06.webp",
+      "/images/properties/interior-12.webp",
+      "/images/properties/interior-18.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.5 × 4.4 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 0,
+    "demo": true
+  },
+  {
+    "id": "31",
+    "slug": "47-shoreline-crescent",
+    "address": "47 Shoreline Crescent",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "Mimico",
+    "type": "Semi-detached",
+    "beds": 3,
+    "baths": 3,
+    "sqft": 1825,
+    "parking": 1,
+    "price": 1420000,
+    "status": "For sale",
+    "daysListed": 1,
+    "featured": false,
+    "headline": "A classic facade. A fresh way to live.",
+    "description": "Thoughtfully arranged living spaces, a practical kitchen and a private outdoor retreat give this home an easy everyday rhythm. Waterfront trails, neighbourhood conveniences and GO Transit connections.",
+    "highlights": [
+      "Private garden",
+      "Main-floor powder room",
+      "Flexible lower level",
+      "Near waterfront trails"
+    ],
+    "coords": {
+      "lat": 43.612,
+      "lng": -79.497
+    },
+    "images": [
+      "/images/properties/exterior-31.webp",
+      "/images/properties/interior-01.webp",
+      "/images/properties/interior-07.webp",
+      "/images/properties/interior-13.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.1 × 4.2 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 9230,
+    "demo": true
+  },
+  {
+    "id": "32",
+    "slug": "49-shoreline-crescent",
+    "address": "49 Shoreline Crescent",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "Mimico",
+    "type": "Detached",
+    "beds": 4,
+    "baths": 4,
+    "sqft": 2575,
+    "parking": 2,
+    "price": 2232500,
+    "status": "For sale",
+    "daysListed": 8,
+    "featured": false,
+    "headline": "Space for the way you live now.",
+    "description": "An open main floor balances shared spaces with quiet corners. Large windows, a generous kitchen and comfortable bedrooms support both family life and hosting. Waterfront trails, neighbourhood conveniences and GO Transit connections.",
+    "highlights": [
+      "Open-plan kitchen",
+      "Primary ensuite",
+      "Private driveway",
+      "Near waterfront trails"
+    ],
+    "coords": {
+      "lat": 43.615,
+      "lng": -79.494
+    },
+    "images": [
+      "/images/properties/exterior-32.webp",
+      "/images/properties/interior-02.webp",
+      "/images/properties/interior-08.webp",
+      "/images/properties/interior-14.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.3 × 4.4 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 14511,
+    "demo": true
+  },
+  {
+    "id": "33",
+    "slug": "51-shoreline-crescent",
+    "address": "51 Shoreline Crescent",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "Mimico",
+    "type": "Townhouse",
+    "beds": 3,
+    "baths": 3,
+    "sqft": 1675,
+    "parking": 1,
+    "price": 1145000,
+    "status": "For sale",
+    "daysListed": 15,
+    "featured": false,
+    "headline": "Considered spaces, from top to bottom.",
+    "description": "A bright, efficient layout brings living, dining and entertaining together. A separate workspace and outdoor area add flexibility without unnecessary upkeep. Waterfront trails, neighbourhood conveniences and GO Transit connections.",
+    "highlights": [
+      "Dedicated workspace",
+      "Outdoor terrace",
+      "Attached garage",
+      "Near waterfront trails"
+    ],
+    "coords": {
+      "lat": 43.618,
+      "lng": -79.491
+    },
+    "images": [
+      "/images/properties/exterior-33.webp",
+      "/images/properties/interior-03.webp",
+      "/images/properties/interior-09.webp",
+      "/images/properties/interior-15.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.5 × 4.2 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 7442,
+    "demo": true
+  },
+  {
+    "id": "34",
+    "slug": "53-shoreline-crescent",
+    "address": "53 Shoreline Crescent",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "Mimico",
+    "type": "Condo",
+    "beds": 2,
+    "baths": 2,
+    "sqft": 1105,
+    "parking": 1,
+    "price": 814000,
+    "status": "For sale",
+    "daysListed": 22,
+    "featured": false,
+    "headline": "A quieter home above the city.",
+    "description": "Daylight reaches the living and dining areas through broad windows. A well-planned kitchen, useful storage and a private balcony make this suite easy to settle into. Waterfront trails, neighbourhood conveniences and GO Transit connections.",
+    "highlights": [
+      "Private balcony",
+      "In-suite laundry",
+      "Underground parking",
+      "Near waterfront trails"
+    ],
+    "coords": {
+      "lat": 43.612,
+      "lng": -79.488
+    },
+    "images": [
+      "/images/properties/exterior-34.webp",
+      "/images/properties/interior-04.webp",
+      "/images/properties/interior-10.webp",
+      "/images/properties/interior-16.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.1 × 4.4 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 650,
+    "taxes": 5291,
+    "demo": true
+  },
+  {
+    "id": "35",
+    "slug": "55-shoreline-crescent",
+    "address": "55 Shoreline Crescent",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "Mimico",
+    "type": "Loft",
+    "beds": 2,
+    "baths": 2,
+    "sqft": 1375,
+    "parking": 0,
+    "price": 1062500,
+    "status": "For sale",
+    "daysListed": 29,
+    "featured": false,
+    "headline": "Character you can build a home around.",
+    "description": "Industrial proportions meet warm finishes in an open living space. High ceilings and a flexible layout leave room for work, dining and a comfortable place to switch off. Waterfront trails, neighbourhood conveniences and GO Transit connections.",
+    "highlights": [
+      "High ceilings",
+      "Open living area",
+      "Flexible den",
+      "Near waterfront trails"
+    ],
+    "coords": {
+      "lat": 43.615,
+      "lng": -79.485
+    },
+    "images": [
+      "/images/properties/exterior-35.webp",
+      "/images/properties/interior-05.webp",
+      "/images/properties/interior-11.webp",
+      "/images/properties/interior-17.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.3 × 4.2 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 650,
+    "taxes": 6906,
+    "demo": true
+  },
+  {
+    "id": "36",
+    "slug": "57-shoreline-crescent",
+    "address": "57 Shoreline Crescent",
+    "city": "Toronto",
+    "province": "ON",
+    "neighbourhood": "Mimico",
+    "type": "Detached",
+    "beds": 4,
+    "baths": 3,
+    "sqft": 2325,
+    "parking": 2,
+    "price": 1545000,
+    "status": "For sale",
+    "daysListed": 1,
+    "featured": false,
+    "headline": "Room to grow, inside and out.",
+    "description": "Distinct living areas, a generous kitchen and a sheltered backyard give everyone room to spread out. The bedroom level keeps private spaces separate from daily activity. Waterfront trails, neighbourhood conveniences and GO Transit connections.",
+    "highlights": [
+      "Fenced backyard",
+      "Family room",
+      "Double driveway",
+      "Near waterfront trails"
+    ],
+    "coords": {
+      "lat": 43.618,
+      "lng": -79.497
+    },
+    "images": [
+      "/images/properties/exterior-36.webp",
+      "/images/properties/interior-06.webp",
+      "/images/properties/interior-12.webp",
+      "/images/properties/interior-18.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.5 × 4.4 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 10042,
+    "demo": true
+  },
+  {
+    "id": "37",
+    "slug": "54-harbourview-way",
+    "address": "54 Harbourview Way",
+    "city": "Mississauga",
+    "province": "ON",
+    "neighbourhood": "Port Credit",
+    "type": "Semi-detached",
+    "beds": 3,
+    "baths": 3,
+    "sqft": 1850,
+    "parking": 1,
+    "price": 1445000,
+    "status": "For sale",
+    "daysListed": 8,
+    "featured": false,
+    "headline": "A classic facade. A fresh way to live.",
+    "description": "Thoughtfully arranged living spaces, a practical kitchen and a private outdoor retreat give this home an easy everyday rhythm. A lakeside village setting with trails, dining and commuter rail nearby.",
+    "highlights": [
+      "Private garden",
+      "Main-floor powder room",
+      "Flexible lower level",
+      "Near waterfront trails"
+    ],
+    "coords": {
+      "lat": 43.548,
+      "lng": -79.588
+    },
+    "images": [
+      "/images/properties/exterior-37.webp",
+      "/images/properties/interior-01.webp",
+      "/images/properties/interior-07.webp",
+      "/images/properties/interior-13.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.1 × 4.2 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 9392,
+    "demo": true
+  },
+  {
+    "id": "38",
+    "slug": "56-harbourview-way",
+    "address": "56 Harbourview Way",
+    "city": "Mississauga",
+    "province": "ON",
+    "neighbourhood": "Port Credit",
+    "type": "Detached",
+    "beds": 4,
+    "baths": 4,
+    "sqft": 2600,
+    "parking": 2,
+    "price": 2257500,
+    "status": "For sale",
+    "daysListed": 15,
+    "featured": false,
+    "headline": "Space for the way you live now.",
+    "description": "An open main floor balances shared spaces with quiet corners. Large windows, a generous kitchen and comfortable bedrooms support both family life and hosting. A lakeside village setting with trails, dining and commuter rail nearby.",
+    "highlights": [
+      "Open-plan kitchen",
+      "Primary ensuite",
+      "Private driveway",
+      "Near waterfront trails"
+    ],
+    "coords": {
+      "lat": 43.551,
+      "lng": -79.585
+    },
+    "images": [
+      "/images/properties/exterior-38.webp",
+      "/images/properties/interior-02.webp",
+      "/images/properties/interior-08.webp",
+      "/images/properties/interior-14.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.3 × 4.4 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 14674,
+    "demo": true
+  },
+  {
+    "id": "39",
+    "slug": "58-harbourview-way",
+    "address": "58 Harbourview Way",
+    "city": "Mississauga",
+    "province": "ON",
+    "neighbourhood": "Port Credit",
+    "type": "Townhouse",
+    "beds": 3,
+    "baths": 3,
+    "sqft": 1700,
+    "parking": 1,
+    "price": 1170000,
+    "status": "For sale",
+    "daysListed": 22,
+    "featured": false,
+    "headline": "Considered spaces, from top to bottom.",
+    "description": "A bright, efficient layout brings living, dining and entertaining together. A separate workspace and outdoor area add flexibility without unnecessary upkeep. A lakeside village setting with trails, dining and commuter rail nearby.",
+    "highlights": [
+      "Dedicated workspace",
+      "Outdoor terrace",
+      "Attached garage",
+      "Near waterfront trails"
+    ],
+    "coords": {
+      "lat": 43.554,
+      "lng": -79.582
+    },
+    "images": [
+      "/images/properties/exterior-39.webp",
+      "/images/properties/interior-03.webp",
+      "/images/properties/interior-09.webp",
+      "/images/properties/interior-15.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.5 × 4.2 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 7605,
+    "demo": true
+  },
+  {
+    "id": "40",
+    "slug": "60-harbourview-way",
+    "address": "60 Harbourview Way",
+    "city": "Mississauga",
+    "province": "ON",
+    "neighbourhood": "Port Credit",
+    "type": "Condo",
+    "beds": 2,
+    "baths": 2,
+    "sqft": 1130,
+    "parking": 1,
+    "price": 839000,
+    "status": "For sale",
+    "daysListed": 29,
+    "featured": false,
+    "headline": "A quieter home above the city.",
+    "description": "Daylight reaches the living and dining areas through broad windows. A well-planned kitchen, useful storage and a private balcony make this suite easy to settle into. A lakeside village setting with trails, dining and commuter rail nearby.",
+    "highlights": [
+      "Private balcony",
+      "In-suite laundry",
+      "Underground parking",
+      "Near waterfront trails"
+    ],
+    "coords": {
+      "lat": 43.548,
+      "lng": -79.579
+    },
+    "images": [
+      "/images/properties/exterior-40.webp",
+      "/images/properties/interior-04.webp",
+      "/images/properties/interior-10.webp",
+      "/images/properties/interior-16.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.1 × 4.4 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 650,
+    "taxes": 5454,
+    "demo": true
+  },
+  {
+    "id": "41",
+    "slug": "62-harbourview-way",
+    "address": "62 Harbourview Way",
+    "city": "Mississauga",
+    "province": "ON",
+    "neighbourhood": "Port Credit",
+    "type": "Loft",
+    "beds": 2,
+    "baths": 2,
+    "sqft": 1400,
+    "parking": 0,
+    "price": 4600,
+    "status": "For lease",
+    "daysListed": 1,
+    "featured": false,
+    "headline": "Character you can build a home around.",
+    "description": "Industrial proportions meet warm finishes in an open living space. High ceilings and a flexible layout leave room for work, dining and a comfortable place to switch off. A lakeside village setting with trails, dining and commuter rail nearby.",
+    "highlights": [
+      "High ceilings",
+      "Open living area",
+      "Flexible den",
+      "Near waterfront trails"
+    ],
+    "coords": {
+      "lat": 43.551,
+      "lng": -79.591
+    },
+    "images": [
+      "/images/properties/exterior-41.webp",
+      "/images/properties/interior-05.webp",
+      "/images/properties/interior-11.webp",
+      "/images/properties/interior-17.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.3 × 4.2 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 650,
+    "taxes": 0,
+    "demo": true
+  },
+  {
+    "id": "42",
+    "slug": "64-harbourview-way",
+    "address": "64 Harbourview Way",
+    "city": "Mississauga",
+    "province": "ON",
+    "neighbourhood": "Port Credit",
+    "type": "Detached",
+    "beds": 4,
+    "baths": 3,
+    "sqft": 2350,
+    "parking": 2,
+    "price": 1570000,
+    "status": "For sale",
+    "daysListed": 8,
+    "featured": false,
+    "headline": "Room to grow, inside and out.",
+    "description": "Distinct living areas, a generous kitchen and a sheltered backyard give everyone room to spread out. The bedroom level keeps private spaces separate from daily activity. A lakeside village setting with trails, dining and commuter rail nearby.",
+    "highlights": [
+      "Fenced backyard",
+      "Family room",
+      "Double driveway",
+      "Near waterfront trails"
+    ],
+    "coords": {
+      "lat": 43.554,
+      "lng": -79.588
+    },
+    "images": [
+      "/images/properties/exterior-42.webp",
+      "/images/properties/interior-06.webp",
+      "/images/properties/interior-12.webp",
+      "/images/properties/interior-18.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.5 × 4.4 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 10205,
+    "demo": true
+  },
+  {
+    "id": "43",
+    "slug": "61-meadowgate-place",
+    "address": "61 Meadowgate Place",
+    "city": "Markham",
+    "province": "ON",
+    "neighbourhood": "Unionville",
+    "type": "Semi-detached",
+    "beds": 3,
+    "baths": 3,
+    "sqft": 1875,
+    "parking": 1,
+    "price": 1470000,
+    "status": "For sale",
+    "daysListed": 15,
+    "featured": false,
+    "headline": "A classic facade. A fresh way to live.",
+    "description": "Thoughtfully arranged living spaces, a practical kitchen and a private outdoor retreat give this home an easy everyday rhythm. Village streets, generous green space and a mix of local shops and services.",
+    "highlights": [
+      "Private garden",
+      "Main-floor powder room",
+      "Flexible lower level",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.865,
+      "lng": -79.311
+    },
+    "images": [
+      "/images/properties/exterior-43.webp",
+      "/images/properties/interior-01.webp",
+      "/images/properties/interior-07.webp",
+      "/images/properties/interior-13.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.1 × 4.2 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 9555,
+    "demo": true
+  },
+  {
+    "id": "44",
+    "slug": "63-meadowgate-place",
+    "address": "63 Meadowgate Place",
+    "city": "Markham",
+    "province": "ON",
+    "neighbourhood": "Unionville",
+    "type": "Detached",
+    "beds": 5,
+    "baths": 4,
+    "sqft": 2625,
+    "parking": 2,
+    "price": 2282500,
+    "status": "For sale",
+    "daysListed": 22,
+    "featured": false,
+    "headline": "Space for the way you live now.",
+    "description": "An open main floor balances shared spaces with quiet corners. Large windows, a generous kitchen and comfortable bedrooms support both family life and hosting. Village streets, generous green space and a mix of local shops and services.",
+    "highlights": [
+      "Open-plan kitchen",
+      "Primary ensuite",
+      "Private driveway",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.868,
+      "lng": -79.308
+    },
+    "images": [
+      "/images/properties/exterior-44.webp",
+      "/images/properties/interior-02.webp",
+      "/images/properties/interior-08.webp",
+      "/images/properties/interior-14.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.3 × 4.4 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 14836,
+    "demo": true
+  },
+  {
+    "id": "45",
+    "slug": "65-meadowgate-place",
+    "address": "65 Meadowgate Place",
+    "city": "Markham",
+    "province": "ON",
+    "neighbourhood": "Unionville",
+    "type": "Townhouse",
+    "beds": 3,
+    "baths": 3,
+    "sqft": 1725,
+    "parking": 1,
+    "price": 1195000,
+    "status": "For sale",
+    "daysListed": 29,
+    "featured": false,
+    "headline": "Considered spaces, from top to bottom.",
+    "description": "A bright, efficient layout brings living, dining and entertaining together. A separate workspace and outdoor area add flexibility without unnecessary upkeep. Village streets, generous green space and a mix of local shops and services.",
+    "highlights": [
+      "Dedicated workspace",
+      "Outdoor terrace",
+      "Attached garage",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.871,
+      "lng": -79.305
+    },
+    "images": [
+      "/images/properties/exterior-45.webp",
+      "/images/properties/interior-03.webp",
+      "/images/properties/interior-09.webp",
+      "/images/properties/interior-15.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.5 × 4.2 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 7768,
+    "demo": true
+  },
+  {
+    "id": "46",
+    "slug": "67-meadowgate-place",
+    "address": "67 Meadowgate Place",
+    "city": "Markham",
+    "province": "ON",
+    "neighbourhood": "Unionville",
+    "type": "Condo",
+    "beds": 2,
+    "baths": 2,
+    "sqft": 1155,
+    "parking": 1,
+    "price": 864000,
+    "status": "For sale",
+    "daysListed": 1,
+    "featured": false,
+    "headline": "A quieter home above the city.",
+    "description": "Daylight reaches the living and dining areas through broad windows. A well-planned kitchen, useful storage and a private balcony make this suite easy to settle into. Village streets, generous green space and a mix of local shops and services.",
+    "highlights": [
+      "Private balcony",
+      "In-suite laundry",
+      "Underground parking",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.865,
+      "lng": -79.317
+    },
+    "images": [
+      "/images/properties/exterior-46.webp",
+      "/images/properties/interior-04.webp",
+      "/images/properties/interior-10.webp",
+      "/images/properties/interior-16.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.1 × 4.4 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 650,
+    "taxes": 5616,
+    "demo": true
+  },
+  {
+    "id": "47",
+    "slug": "69-meadowgate-place",
+    "address": "69 Meadowgate Place",
+    "city": "Markham",
+    "province": "ON",
+    "neighbourhood": "Unionville",
+    "type": "Loft",
+    "beds": 2,
+    "baths": 2,
+    "sqft": 1425,
+    "parking": 0,
+    "price": 1112500,
+    "status": "For sale",
+    "daysListed": 8,
+    "featured": false,
+    "headline": "Character you can build a home around.",
+    "description": "Industrial proportions meet warm finishes in an open living space. High ceilings and a flexible layout leave room for work, dining and a comfortable place to switch off. Village streets, generous green space and a mix of local shops and services.",
+    "highlights": [
+      "High ceilings",
+      "Open living area",
+      "Flexible den",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.868,
+      "lng": -79.314
+    },
+    "images": [
+      "/images/properties/exterior-47.webp",
+      "/images/properties/interior-05.webp",
+      "/images/properties/interior-11.webp",
+      "/images/properties/interior-17.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.3 × 4.2 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 650,
+    "taxes": 7231,
+    "demo": true
+  },
+  {
+    "id": "48",
+    "slug": "71-meadowgate-place",
+    "address": "71 Meadowgate Place",
+    "city": "Markham",
+    "province": "ON",
+    "neighbourhood": "Unionville",
+    "type": "Detached",
+    "beds": 4,
+    "baths": 3,
+    "sqft": 2375,
+    "parking": 2,
+    "price": 1595000,
+    "status": "For sale",
+    "daysListed": 15,
+    "featured": false,
+    "headline": "Room to grow, inside and out.",
+    "description": "Distinct living areas, a generous kitchen and a sheltered backyard give everyone room to spread out. The bedroom level keeps private spaces separate from daily activity. Village streets, generous green space and a mix of local shops and services.",
+    "highlights": [
+      "Fenced backyard",
+      "Family room",
+      "Double driveway",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.871,
+      "lng": -79.311
+    },
+    "images": [
+      "/images/properties/exterior-48.webp",
+      "/images/properties/interior-06.webp",
+      "/images/properties/interior-12.webp",
+      "/images/properties/interior-18.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.5 × 4.4 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 10368,
+    "demo": true
+  },
+  {
+    "id": "49",
+    "slug": "68-stonebridge-court",
+    "address": "68 Stonebridge Court",
+    "city": "Vaughan",
+    "province": "ON",
+    "neighbourhood": "Vaughan",
+    "type": "Semi-detached",
+    "beds": 3,
+    "baths": 3,
+    "sqft": 1900,
+    "parking": 1,
+    "price": 1495000,
+    "status": "For sale",
+    "daysListed": 22,
+    "featured": false,
+    "headline": "A classic facade. A fresh way to live.",
+    "description": "Thoughtfully arranged living spaces, a practical kitchen and a private outdoor retreat give this home an easy everyday rhythm. Established residential streets, everyday shopping and regional connections.",
+    "highlights": [
+      "Private garden",
+      "Main-floor powder room",
+      "Flexible lower level",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.826,
+      "lng": -79.529
+    },
+    "images": [
+      "/images/properties/exterior-49.webp",
+      "/images/properties/interior-01.webp",
+      "/images/properties/interior-07.webp",
+      "/images/properties/interior-13.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.1 × 4.2 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 9718,
+    "demo": true
+  },
+  {
+    "id": "50",
+    "slug": "70-stonebridge-court",
+    "address": "70 Stonebridge Court",
+    "city": "Vaughan",
+    "province": "ON",
+    "neighbourhood": "Vaughan",
+    "type": "Detached",
+    "beds": 4,
+    "baths": 4,
+    "sqft": 2650,
+    "parking": 2,
+    "price": 2307500,
+    "status": "For sale",
+    "daysListed": 29,
+    "featured": false,
+    "headline": "Space for the way you live now.",
+    "description": "An open main floor balances shared spaces with quiet corners. Large windows, a generous kitchen and comfortable bedrooms support both family life and hosting. Established residential streets, everyday shopping and regional connections.",
+    "highlights": [
+      "Open-plan kitchen",
+      "Primary ensuite",
+      "Private driveway",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.829,
+      "lng": -79.526
+    },
+    "images": [
+      "/images/properties/exterior-50.webp",
+      "/images/properties/interior-02.webp",
+      "/images/properties/interior-08.webp",
+      "/images/properties/interior-14.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.3 × 4.4 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 14999,
+    "demo": true
+  },
+  {
+    "id": "51",
+    "slug": "72-stonebridge-court",
+    "address": "72 Stonebridge Court",
+    "city": "Vaughan",
+    "province": "ON",
+    "neighbourhood": "Vaughan",
+    "type": "Townhouse",
+    "beds": 3,
+    "baths": 3,
+    "sqft": 1750,
+    "parking": 1,
+    "price": 1220000,
+    "status": "For sale",
+    "daysListed": 1,
+    "featured": false,
+    "headline": "Considered spaces, from top to bottom.",
+    "description": "A bright, efficient layout brings living, dining and entertaining together. A separate workspace and outdoor area add flexibility without unnecessary upkeep. Established residential streets, everyday shopping and regional connections.",
+    "highlights": [
+      "Dedicated workspace",
+      "Outdoor terrace",
+      "Attached garage",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.832,
+      "lng": -79.538
+    },
+    "images": [
+      "/images/properties/exterior-51.webp",
+      "/images/properties/interior-03.webp",
+      "/images/properties/interior-09.webp",
+      "/images/properties/interior-15.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.5 × 4.2 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 7930,
+    "demo": true
+  },
+  {
+    "id": "52",
+    "slug": "74-stonebridge-court",
+    "address": "74 Stonebridge Court",
+    "city": "Vaughan",
+    "province": "ON",
+    "neighbourhood": "Vaughan",
+    "type": "Condo",
+    "beds": 2,
+    "baths": 2,
+    "sqft": 1180,
+    "parking": 1,
+    "price": 3550,
+    "status": "For lease",
+    "daysListed": 8,
+    "featured": false,
+    "headline": "A quieter home above the city.",
+    "description": "Daylight reaches the living and dining areas through broad windows. A well-planned kitchen, useful storage and a private balcony make this suite easy to settle into. Established residential streets, everyday shopping and regional connections.",
+    "highlights": [
+      "Private balcony",
+      "In-suite laundry",
+      "Underground parking",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.826,
+      "lng": -79.535
+    },
+    "images": [
+      "/images/properties/exterior-52.webp",
+      "/images/properties/interior-04.webp",
+      "/images/properties/interior-10.webp",
+      "/images/properties/interior-16.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.1 × 4.4 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 650,
+    "taxes": 0,
+    "demo": true
+  },
+  {
+    "id": "53",
+    "slug": "76-stonebridge-court",
+    "address": "76 Stonebridge Court",
+    "city": "Vaughan",
+    "province": "ON",
+    "neighbourhood": "Vaughan",
+    "type": "Loft",
+    "beds": 2,
+    "baths": 2,
+    "sqft": 1450,
+    "parking": 0,
+    "price": 1137500,
+    "status": "For sale",
+    "daysListed": 15,
+    "featured": false,
+    "headline": "Character you can build a home around.",
+    "description": "Industrial proportions meet warm finishes in an open living space. High ceilings and a flexible layout leave room for work, dining and a comfortable place to switch off. Established residential streets, everyday shopping and regional connections.",
+    "highlights": [
+      "High ceilings",
+      "Open living area",
+      "Flexible den",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.829,
+      "lng": -79.532
+    },
+    "images": [
+      "/images/properties/exterior-53.webp",
+      "/images/properties/interior-05.webp",
+      "/images/properties/interior-11.webp",
+      "/images/properties/interior-17.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.3 × 4.2 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 650,
+    "taxes": 7394,
+    "demo": true
+  },
+  {
+    "id": "54",
+    "slug": "78-stonebridge-court",
+    "address": "78 Stonebridge Court",
+    "city": "Vaughan",
+    "province": "ON",
+    "neighbourhood": "Vaughan",
+    "type": "Detached",
+    "beds": 4,
+    "baths": 3,
+    "sqft": 2400,
+    "parking": 2,
+    "price": 1620000,
+    "status": "For sale",
+    "daysListed": 22,
+    "featured": false,
+    "headline": "Room to grow, inside and out.",
+    "description": "Distinct living areas, a generous kitchen and a sheltered backyard give everyone room to spread out. The bedroom level keeps private spaces separate from daily activity. Established residential streets, everyday shopping and regional connections.",
+    "highlights": [
+      "Fenced backyard",
+      "Family room",
+      "Double driveway",
+      "Neighbourhood parks nearby"
+    ],
+    "coords": {
+      "lat": 43.832,
+      "lng": -79.529
+    },
+    "images": [
+      "/images/properties/exterior-54.webp",
+      "/images/properties/interior-06.webp",
+      "/images/properties/interior-12.webp",
+      "/images/properties/interior-18.webp"
+    ],
+    "imageLabels": ["Exterior", "Living room", "Kitchen", "Bedroom"],
+    "rooms": [
+      {
+        "name": "Living / dining",
+        "dimensions": "5.5 × 4.4 m"
+      },
+      {
+        "name": "Kitchen",
+        "dimensions": "3.6 × 3.2 m"
+      },
+      {
+        "name": "Primary bedroom",
+        "dimensions": "4.2 × 3.8 m"
+      },
+      {
+        "name": "Second bedroom",
+        "dimensions": "3.4 × 3.0 m"
+      }
+    ],
+    "fees": 0,
+    "taxes": 10530,
+    "demo": true
+  }
+]

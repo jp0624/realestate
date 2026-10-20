@@ -1,3 +1,11 @@
 {
-	"rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "framework": "vite",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    {
+      "source": "/((?!assets/|images/|data/|favicon|responsive-preview.html).*)",
+      "destination": "/index.html"
+    }
+  ]
 }
