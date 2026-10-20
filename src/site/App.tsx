@@ -717,8 +717,8 @@ function Listings({
             {savedOnly ? "saved" : "in your collection"}
             <span> · Sample listings</span>
           </p>
-          <div>
-            <label className="sort-label">
+          <div className="flex-wrap">
+            <label className="sort-label whitespace-nowrap">
               Sort by{" "}
               <select
                 aria-label="Sort properties"
