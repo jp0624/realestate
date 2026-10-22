@@ -43,6 +43,8 @@ import {
   Car,
   Bookmark,
   Share2,
+  Sun,
+  Moon,
 } from "lucide-react";
 import {
   properties,
@@ -88,6 +90,8 @@ function ScrollReset() {
   return null;
 }
 function Header() {
+  const [theme,setTheme]=useState<"light"|"dark">(()=>{try{return localStorage.getItem("realty-theme")==="light"?"light":"dark"}catch{return "dark"}});
+  useEffect(()=>{document.documentElement.dataset.theme=theme;document.querySelector('meta[name="theme-color"]')?.setAttribute("content",theme==="dark"?"#181617":"#f8f8f3");try{localStorage.setItem("realty-theme",theme)}catch{}},[theme]);
   const [open, setOpen] = useState(false);
   const { saved } = useSaved();
   const location = useLocation();
@@ -135,9 +139,11 @@ function Header() {
             Saved <span>{saved.length}</span>
           </Link>
         </nav>
+        <div className="header-actions">
         <Link className="button inline-flex items-center justify-center [gap:16px] [padding:17px_24px] whitespace-nowrap button-small header-contact" to="/contact">
           Let’s talk <ArrowUpRight size={15} />
         </Link>
+        <button className="realty-theme-toggle" aria-label={theme==="dark"?"Switch to light theme":"Switch to dark red theme"} onClick={()=>setTheme(theme==="dark"?"light":"dark")}>{theme==="dark"?<Sun size={18}/>:<Moon size={18}/>}</button>
         <button
           className="icon-button inline-flex items-center justify-center [padding:8px] mobile-menu"
           aria-expanded={open}
@@ -146,6 +152,7 @@ function Header() {
         >
           {open ? <X /> : <Menu />}
         </button>
+        </div>
       </header>
     </>
   );
@@ -2015,3 +2022,4 @@ export default function App() {
     </SavedContext.Provider>
   );
 }
+
