@@ -21,3 +21,15 @@ DM Sans Variable and Manrope Variable are bundled from the Fontsource packages a
 ## Maps
 
 Leaflet renders the map using standard OpenStreetMap tiles. Attribution remains visible on the map. Coordinates identify approximate neighbourhood positions for the fictional collection; no address geocoding or real listing verification is implied.
+
+## Realty Property Search neighbourhood hero (2026-10-23)
+
+Original images created with the built-in image generation tool and optimized to WebP in `public/images/neighbourhoods/`:
+
+- `village.webp`: photorealistic Toronto-inspired leafy residential village street, red-brick homes, mature maples and morning light.
+- `waterfront.webp`: photorealistic Toronto-inspired waterfront boardwalk, mid-rise homes, lake and sunset skyline.
+- `urban.webp`: photorealistic Toronto-inspired walkable urban street, brick shopfronts, patios, street trees and warm autumn light.
+
+All prompts requested wide editorial architectural photography, headline space, no readable signage/logos/watermarks, and a fictional illustrative setting rather than an actual listed property. The UI labels every scene as AI-generated inspiration. Source PNGs were retained during production; the committed WebP assets are the deployed versions.
+
+The new `public/assets/realty-mark.svg` is an original code-native roof-and-search mark; `public/favicon.svg` uses the same mark.

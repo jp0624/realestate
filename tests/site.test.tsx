@@ -1,6 +1,7 @@
 import { afterEach, beforeEach, describe, expect, test, vi } from "vitest";
 import {
   cleanup,
+  act,
   fireEvent,
   render,
   screen,
@@ -20,6 +21,7 @@ vi.mock("../src/site/PropertyMap", () => ({
 }));
 beforeEach(() => {
   localStorage.clear();
+  vi.stubGlobal("matchMedia", () => ({matches:false,addEventListener:vi.fn(),removeEventListener:vi.fn()}));
   vi.stubGlobal("scrollTo", vi.fn());
   HTMLDialogElement.prototype.showModal = function () {
     this.setAttribute("open", "");
@@ -32,6 +34,7 @@ beforeEach(() => {
 afterEach(() => {
   cleanup();
   vi.unstubAllGlobals();
+  vi.useRealTimers();
 });
 const show = (path: string) =>
   render(
@@ -168,7 +171,7 @@ test("contact form prepares a reviewable email without claiming submission", asy
   );
   await u.click(screen.getByRole("button", { name: "Prepare my email" }));
   const link = screen.getByRole("link", { name: "Open email draft" });
-  expect(link.getAttribute("href")).toContain("mailto:kimlechat@kw.com");
+  expect(link.getAttribute("href")).toContain("mailto:johnparker@rogers.com");
   expect(decodeURIComponent(link.getAttribute("href")!)).toContain(
     "12 Cedarview Lane",
   );
@@ -203,4 +206,21 @@ test("private notes stay attached to the home when opening a related property", 
   expect(JSON.parse(localStorage.getItem("lechat-note-1")!)).toBe(
     "Only for the first home.",
   );
+});
+
+test("neighbourhood hero supports manual navigation, pause and automatic playback", () => {
+  vi.useFakeTimers();
+  show("/");
+  const hero = screen.getByRole("region", {name:"Neighbourhood inspiration"});
+  expect(screen.getByRole("link", {name:"Realty Property Search home"})).toBeTruthy();
+  expect(screen.queryByText(/Le-Chat/i)).toBeNull();
+  fireEvent.click(screen.getByRole("button", {name:"Next neighbourhood scene"}));
+  expect(screen.getByRole("heading", {name:"A little closer to the water."})).toBeTruthy();
+  fireEvent.keyDown(hero, {key:"ArrowLeft"});
+  fireEvent.click(screen.getByRole("button", {name:"Pause neighbourhood slideshow"}));
+  act(() => vi.advanceTimersByTime(13000));
+  expect(screen.getByRole("heading", {name:"The leafy side of city life."})).toBeTruthy();
+  fireEvent.click(screen.getByRole("button", {name:"Play neighbourhood slideshow"}));
+  act(() => vi.advanceTimersByTime(6500));
+  expect(screen.getByRole("heading", {name:"A little closer to the water."})).toBeTruthy();
 });

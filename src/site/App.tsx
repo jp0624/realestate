@@ -38,7 +38,6 @@ import {
   Map as MapIcon,
   Check,
   Plus,
-  Phone,
   Mail,
   Car,
   Bookmark,
@@ -58,6 +57,7 @@ import {
   type Filters,
 } from "./data";
 import { isSearchSite } from "./config";
+import NeighbourhoodHero from "./NeighbourhoodHero";
 const PropertyMap = lazy(() => import("./PropertyMap"));
 const storageKey = "lechat-saved-v2";
 const SavedContext = createContext<{
@@ -85,7 +85,7 @@ function ScrollReset() {
   const location = useLocation();
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
-    document.title = `${isSearchSite ? "Le-Chat | Property Search" : "Le-Chat | Real Estate"} — ${location.pathname.includes("property") ? "Home details" : location.pathname === "/" ? "Toronto & GTA" : location.pathname.split("/").filter(Boolean).join(" ").replaceAll("-", " ")}`;
+    document.title = `${isSearchSite ? "Realty Property Search" : "Realty Property Search"} — ${location.pathname.includes("property") ? "Home details" : location.pathname === "/" ? "Toronto & GTA" : location.pathname.split("/").filter(Boolean).join(" ").replaceAll("-", " ")}`;
   }, [location.pathname]);
   return null;
 }
@@ -99,20 +99,15 @@ function Header() {
   return (
     <>
       <div className="demo-bar flex justify-between [padding:7px_5%] max-[700px]:[padding:7px_5%] max-[700px]:justify-center max-[700px]:text-center">
-        <span>LE-CHAT COLLECTION</span>
+        <span>REALTY PROPERTY SEARCH</span>
         <span>
           Concept portfolio · Fictional homes & AI-generated photography
         </span>
       </div>
       <header className="header sticky [top:0] [z-index:1100] flex justify-between items-center [padding:21px_5%] [gap:30px] [min-height:92px] max-[1200px]:[gap:20px] max-[1200px]:[padding-left:4%] max-[1200px]:[padding-right:4%] max-[700px]:[min-height:78px] max-[700px]:[padding:17px_5%] max-[700px]:[gap:15px]">
-        <Link to="/" className="wordmark" aria-label="Le-Chat home">
-          <span className="brand-mark" aria-hidden="true">
-            ⌂
-          </span>
-          <span>
-            LE-CHAT
-            <small>{isSearchSite ? "PROPERTY SEARCH" : "REAL ESTATE"}</small>
-          </span>
+        <Link to="/" className="wordmark" aria-label="Realty Property Search home">
+          <img className="realty-logo-mark" src="/assets/realty-mark.svg" alt="" />
+          <span className="realty-logo-type">REALTY<small>PROPERTY SEARCH</small></span>
         </Link>
         <nav aria-label="Main navigation" className={open ? "open" : ""}>
           {(isSearchSite
@@ -185,12 +180,12 @@ function Footer() {
             <Link to="/buy">Buying a home</Link>
             <Link to="/sell">Selling your home</Link>
             <Link to="/mortgage-calculator">Mortgage calculator</Link>
-            <Link to="/about">About Le-Chat</Link>
+            <Link to="/about">About Realty Property Search</Link>
           </div>
           <div>
             <h3>Get in touch</h3>
-            <a href="tel:+16472734575">647 273 4575</a>
-            <a href="mailto:kimlechat@kw.com">kimlechat@kw.com</a>
+            <p>Portfolio enquiries</p>
+            <a href="mailto:johnparker@rogers.com">johnparker@rogers.com</a>
             <p>
               Toronto & the Greater
               <br />
@@ -201,9 +196,9 @@ function Footer() {
       </div>
       <div className="footer-bottom flex items-center justify-between [gap:24px] [padding-top:25px] max-[900px]:flex-wrap max-[700px]:[gap:20px] max-[700px]:items-start">
         <Link to="/" className="wordmark">
-          LE-CHAT <span>REAL ESTATE</span>
+          REALTY <span>PROPERTY SEARCH</span>
         </Link>
-        <p>© {new Date().getFullYear()} Le-Chat concept website.</p>
+        <p>© {new Date().getFullYear()} Realty Property Search concept website.</p>
         <p>
           54 fictional listings. Images are AI-generated illustrations.
           <br />
@@ -393,7 +388,7 @@ function Home() {
           practical questions and the big ideas. We’ll help you see what matters
           and plan the next step.
         </p>
-        <Link to="/about" className="round-link [width:50px] [height:50px] grid place-items-center" aria-label="About Le-Chat">
+        <Link to="/about" className="round-link [width:50px] [height:50px] grid place-items-center" aria-label="About Realty Property Search">
           <ArrowUpRight />
         </Link>
       </div>
@@ -579,6 +574,7 @@ function Listings({
             : Number(b.featured) - Number(a.featured),
     );
   }, [params.toString(), saved, newOnly, view, inMap, mapBounds]);
+  const Heading = routePath === "/" ? "h2" : "h1";
   const title = savedOnly
     ? "A shortlist that feels like you."
     : newOnly
@@ -597,7 +593,7 @@ function Listings({
                 ? "NEW THIS WEEK"
                 : "TORONTO & GREATER TORONTO AREA"}
           </p>
-          <h1>{title}</h1>
+          <Heading>{title}</Heading>
           <p>
             {savedOnly
               ? "Keep the homes you want to revisit. Your shortlist stays on this browser."
@@ -616,7 +612,7 @@ function Listings({
           </small>
         </span>
       </section>
-      <section className="listing-section [padding:28px_5%_70px] max-[700px]:[padding:22px_5%_55px]">
+      <section id="homes" className="listing-section [padding:28px_5%_70px] max-[700px]:[padding:22px_5%_55px]">
         <div className="filter-bar flex [gap:12px] [padding-bottom:23px] max-[1200px]:[gap:8px] max-[900px]:flex-wrap max-[700px]:[gap:8px] max-[700px]:[padding-bottom:20px]">
           <div className="search-input flex items-center [flex:1] [padding:0_14px] [gap:7px] max-[900px]:[min-height:50px] max-[700px]:[height:48px]">
             <Search size={18} />
@@ -1123,7 +1119,7 @@ function PropertyDetail() {
               <em>Ask the right questions.</em>
             </h2>
             <p>
-              Tell Kim what caught your eye, what you’re looking for and when
+              Tell us what caught your eye, what you’re looking for and when
               you hope to move.
             </p>
             <Link
@@ -1132,13 +1128,10 @@ function PropertyDetail() {
             >
               Ask about a home <ArrowUpRight size={16} />
             </Link>
-            <a className="contact-line" href="tel:+16472734575">
-              <Phone size={16} />
-              647 273 4575
-            </a>
-            <a className="contact-line" href="mailto:kimlechat@kw.com">
+
+            <a className="contact-line" href="mailto:johnparker@rogers.com">
               <Mail size={16} />
-              kimlechat@kw.com
+              johnparker@rogers.com
             </a>
             <hr />
             <p className="eyebrow">PLANNING AHEAD</p>
@@ -1390,26 +1383,26 @@ function About() {
             links. They deserve a conversation.
           </p>
           <p>
-            At Le-Chat, the starting point is your everyday life: where you want
+            At Realty Property Search, the starting point is your everyday life: where you want
             to be, what you need from a home and what you’re ready to change.
-            Kim Le-Chat is your point of contact for that conversation.
+            This independent portfolio experience helps you compare those priorities at your own pace.
           </p>
           <p>
             Bring the questions, the timing and the wish list. A focused search
             or a considered selling plan starts by getting those details clear.
           </p>
           <Link to="/contact" className="button inline-flex items-center justify-center [gap:16px] [padding:17px_24px] whitespace-nowrap">
-            Talk with Kim <ArrowUpRight size={17} />
+            Discuss your search <ArrowUpRight size={17} />
           </Link>
         </div>
         <div className="agent-portrait">
           <img
-            src="/images/kim-lechat.png"
-            alt="Kim Le-Chat, from the original Le-Chat website"
+            src="/images/neighbourhoods/village.webp"
+            alt="AI-generated leafy neighbourhood inspiration for Realty Property Search"
           />
           <div>
-            <strong>Kim Le-Chat</strong>
-            <span>LE-CHAT REAL ESTATE</span>
+            <strong>Realty Property Search</strong>
+            <span>REALTY PROPERTY SEARCH</span>
           </div>
         </div>
       </section>
@@ -1474,8 +1467,8 @@ function About() {
       <Faq
         items={[
           [
-            "Where does Le-Chat focus?",
-            "This concept collection explores Toronto and the Greater Toronto Area, including selected neighbourhoods in Mississauga, Markham and Vaughan. Contact Kim to discuss the areas relevant to your plans.",
+            "Where does Realty Property Search focus?",
+            "This concept collection explores Toronto and the Greater Toronto Area, including selected neighbourhoods in Mississauga, Markham and Vaughan. Explore the sample homes and compare the areas relevant to your plans.",
           ],
           [
             "How can I get started?",
@@ -1790,9 +1783,9 @@ function Contact() {
   function submit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const d = new FormData(e.currentTarget);
-    const body = `Hello Kim,\n\nMy name is ${d.get("name")}. I'm interested in ${interest.toLowerCase()}.\n${params.get("property") ? `Property: ${params.get("property")}\n` : ""}Preferred timing: ${d.get("timing")}\nEmail: ${d.get("email")}\nPhone: ${d.get("phone") || "Not provided"}\n\n${d.get("message")}\n\nSent from the Le-Chat concept website.`;
+    const body = `Hello John,\n\nMy name is ${d.get("name")}. I'm interested in ${interest.toLowerCase()}.\n${params.get("property") ? `Property: ${params.get("property")}\n` : ""}Preferred timing: ${d.get("timing")}\nEmail: ${d.get("email")}\nPhone: ${d.get("phone") || "Not provided"}\n\n${d.get("message")}\n\nSent from the Realty Property Search concept website.`;
     setDraft(
-      `mailto:kimlechat@kw.com?subject=${encodeURIComponent(`Le-Chat enquiry · ${interest}`)}&body=${encodeURIComponent(body)}`,
+      `mailto:johnparker@rogers.com?subject=${encodeURIComponent(`Realty Property Search enquiry · ${interest}`)}&body=${encodeURIComponent(body)}`,
     );
   }
   return (
@@ -1811,16 +1804,11 @@ function Contact() {
             that matter to you.
           </p>
           <div className="contact-details">
-            <a href="tel:+16472734575">
-              <Phone />
-              <span>
-                <small>CALL KIM</small>647 273 4575
-              </span>
-            </a>
-            <a href="mailto:kimlechat@kw.com">
+
+            <a href="mailto:johnparker@rogers.com">
               <Mail />
               <span>
-                <small>WRITE A NOTE</small>kimlechat@kw.com
+                <small>WRITE A NOTE</small>johnparker@rogers.com
               </span>
             </a>
             <p>
@@ -1831,8 +1819,7 @@ function Contact() {
             </p>
           </div>
           <p className="form-help">
-            Contact details are retained from the original Le-Chat website. This
-            concept form prepares an email for you to review in your own email
+            Portfolio enquiries go to John Parker. This concept form prepares an email for you to review in your own email
             app.
           </p>
         </div>
@@ -1989,7 +1976,7 @@ export default function App() {
       )}
       <main id="main">
         <Routes>
-          <Route path="/" element={isSearchSite ? <Listings /> : <Home />} />
+          <Route path="/" element={isSearchSite ? <><NeighbourhoodHero /><Listings /></> : <Home />} />
           <Route path="/find-your-home" element={<Listings />} />
           <Route path="/new-listings" element={<Listings newOnly />} />
           <Route path="/map" element={<Listings mapDefault />} />
@@ -2022,4 +2009,3 @@ export default function App() {
     </SavedContext.Provider>
   );
 }
-

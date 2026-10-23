@@ -1,0 +1,19 @@
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowUpRight, ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react';
+const scenes = [
+  {file:'village.webp',title:'The leafy side of city life.',label:'Village streets',alt:'AI-generated Toronto-inspired leafy street with brick homes and mature trees'},
+  {file:'waterfront.webp',title:'A little closer to the water.',label:'Waterfront living',alt:'AI-generated Toronto-inspired waterfront boardwalk with landscaped gardens and mid-rise homes'},
+  {file:'urban.webp',title:'Your everyday, within walking distance.',label:'Connected neighbourhoods',alt:'AI-generated Toronto-inspired walkable neighbourhood with brick shopfronts, patios and street trees'},
+];
+export default function NeighbourhoodHero(){
+ const [index,setIndex]=useState(0);const [playing,setPlaying]=useState(false);const [reduce,setReduce]=useState(false);const [hidden,setHidden]=useState(false);const [engaged,setEngaged]=useState(false);
+ useEffect(()=>{const m=matchMedia('(prefers-reduced-motion: reduce)');const sync=()=>{setReduce(m.matches);setPlaying(!m.matches)};sync();m.addEventListener('change',sync);const visibility=()=>setHidden(document.hidden);document.addEventListener('visibilitychange',visibility);return()=>{m.removeEventListener('change',sync);document.removeEventListener('visibilitychange',visibility)}},[]);
+ useEffect(()=>{if(!playing||hidden||engaged)return;const t=setTimeout(()=>setIndex(i=>(i+1)%scenes.length),6500);return()=>clearTimeout(t)},[playing,hidden,engaged,index]);
+ const move=(delta:number)=>setIndex(i=>(i+delta+scenes.length)%scenes.length);
+ return <section className={`neighbourhood-hero ${reduce?'reduce-motion':''}`} aria-label="Neighbourhood inspiration" aria-roledescription="carousel" onMouseEnter={()=>setEngaged(true)} onMouseLeave={()=>setEngaged(false)} onFocusCapture={()=>setEngaged(true)} onBlurCapture={e=>{if(!e.currentTarget.contains(e.relatedTarget))setEngaged(false)}} onKeyDown={e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();move(e.key==='ArrowRight'?1:-1)}}}>
+  <div className="neighbourhood-scenes">{scenes.map((s,i)=><img key={s.file} src={`/images/neighbourhoods/${s.file}`} alt={s.alt} aria-hidden={i!==index} className={i===index?'active':''} loading={i===0?'eager':'lazy'} decoding="async"/>)}</div><div className="neighbourhood-shade"/>
+  <div className="neighbourhood-hero-copy"><p className="eyebrow">REALTY PROPERTY SEARCH / TORONTO & GTA</p><h1>Find a place.<br/><em>Feel at home.</em></h1><p>Start with the life you want to live. Explore homes, compare neighbourhoods and find your own sense of belonging.</p><div className="neighbourhood-hero-actions"><a className="button" href="#homes">Discover the homes <ArrowUpRight size={17}/></a><Link className="neighbourhood-text-link" to="/neighbourhoods">Explore neighbourhoods <ArrowUpRight size={16}/></Link></div></div>
+  <div className="neighbourhood-hero-bottom"><div aria-live={playing?'off':'polite'}><span className="neighbourhood-scene-number">0{index+1} / 03</span><h2>{scenes[index].title}</h2><p>AI-generated neighbourhood inspiration · Fictional scenes</p></div><div className="neighbourhood-controls"><button aria-label="Previous neighbourhood scene" onClick={()=>move(-1)}><ChevronLeft size={19}/></button><div className="neighbourhood-dots">{scenes.map((s,i)=><button key={s.file} aria-label={`Show ${s.label.toLowerCase()}`} aria-pressed={i===index} onClick={()=>setIndex(i)}><span/></button>)}</div><button aria-label="Next neighbourhood scene" onClick={()=>move(1)}><ChevronRight size={19}/></button><button aria-label={playing?'Pause neighbourhood slideshow':'Play neighbourhood slideshow'} onClick={()=>setPlaying(!playing)}>{playing?<Pause size={16}/>:<Play size={16}/>}</button></div></div>
+ </section>
+}

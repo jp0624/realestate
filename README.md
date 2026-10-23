@@ -1,6 +1,6 @@
-# Le-Chat — Property Search
+# Realty Property Search
 
-A React and TypeScript real estate experience for the Le-Chat concept portfolio. The collection contains 54 fictional Toronto and GTA homes, including 50 additions to the four original sample records. Every home has its own generated exterior and a four-view gallery with a living room, kitchen and bedroom.
+A React and TypeScript real estate experience for the Realty Property Search concept portfolio. The collection contains 54 fictional Toronto and GTA homes, including 50 additions to the four original sample records. Every home has its own generated exterior and a four-view gallery with a living room, kitchen and bedroom.
 
 [Open the live site](https://jp-realestate.vercel.app/)
 
@@ -10,7 +10,7 @@ A React and TypeScript real estate experience for the Le-Chat concept portfolio.
 - Browse a paginated grid or an interactive Leaflet/OpenStreetMap map. Area counts open into price markers as you zoom. Filter the results to the visible map area or reset the map to all matching homes.
 - Save homes on the current browser and revisit them on the saved page.
 - Open complete property pages, browse the gallery by buttons or arrow keys, and keep private viewing notes on the current browser.
-- Read buying and selling guides, neighbourhood introductions, an agent introduction and practical FAQs.
+- Read buying and selling guides, neighbourhood introductions, a project introduction and practical FAQs.
 - Change the home price, down payment, rate, amortization, tax and maintenance assumptions in the mortgage planning calculator.
 - Prepare an enquiry as an email draft. The visitor reviews and sends it in their own email application. The website does not submit a lead or claim an email was sent.
 
@@ -58,7 +58,7 @@ The calculator uses a nominal annual interest rate compounded semi-annually and 
 
 ## Demonstration content
 
-All 54 listings are fictional. Prices, dimensions, addresses, features and dates are sample data; map pins indicate approximate neighbourhood positions. The home images were generated for this portfolio and are labelled as illustrations. This site does not provide MLS or brokerage inventory. Kim Le-Chat’s photograph and contact details are retained from the original repository; no new agent credentials, sales figures, awards or client testimonials have been invented.
+All 54 listings are fictional. Prices, dimensions, addresses, features and dates are sample data; map pins indicate approximate neighbourhood positions. The home images were generated for this portfolio and are labelled as illustrations. This site does not provide MLS or brokerage inventory. The former agent branding and portrait have been replaced by Realty Property Search. Portfolio enquiries are addressed to John Parker; no brokerage credentials, sales figures, awards or testimonials are claimed.
 
 ## Verification
 
@@ -71,3 +71,7 @@ For a reference on mortgage terms and amortization, see the [Financial Consumer 
 Tailwind CSS 4 runs through the official Vite plugin. Responsive utility classes are used directly in `src/site/App.tsx` and `PropertyMap.tsx` for the page grids, spacing, card layouts, forms and map/list views. `src/site/styles.css` keeps the custom brand typography, image treatments, Leaflet styling and interaction states. No Tailwind CDN is required.
 
 The layouts adapt at 1200, 900 and 700 pixels. Phones get a collapsible navigation, stacked map/list results, single-column cards, a viewport-sized gallery and full-width search controls. Touch controls have a 44px minimum target on smaller screens, and form fields use 16px text to avoid iOS input zoom. Reduced-motion settings are respected.
+
+## Neighbourhood inspiration hero
+
+Three original AI-generated, fictional Toronto-inspired neighbourhood scenes (village street, waterfront and walkable urban street) fade every 6.5 seconds. Previous/next, direct scene selectors, arrow keys and pause/play controls are available. Playback pauses while hovered or focused, and when the tab is hidden. Reduced-motion users start with a static scene and can still navigate manually. Imagery is clearly labelled as illustration, not a real neighbourhood photograph or listing.
